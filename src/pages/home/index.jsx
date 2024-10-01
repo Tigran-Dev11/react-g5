@@ -8,6 +8,8 @@ const Home = () => {
     <div>
       <h1>Home</h1>
       <img src={home} alt="home" />
+
+  
     </div>
   );
 };
