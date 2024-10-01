@@ -3,7 +3,7 @@ import "./style.css";
 
 const Header = () => {
   return (
-    <div className="header-container">
+    <header className="header-container">
       <ul>
         {menus.map((item,i) => {
           return (
@@ -13,7 +13,7 @@ const Header = () => {
           );
         })}
       </ul>
-    </div>
+    </header>
   );
 };
 

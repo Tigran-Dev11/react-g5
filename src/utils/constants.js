@@ -32,4 +32,9 @@ export const menus = [
     name: "Login",
     href: ROUTES.LOGIN,
   },
+  {
+    id: 6,
+    name: "About",
+    href: ROUTES.LOGIN,
+  },
 ];
