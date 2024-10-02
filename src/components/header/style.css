@@ -1,0 +1,27 @@
+header{
+    padding: 1rem 5%;
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+    background-color: #141414;
+
+}
+header .wrapper{
+    width: 30%;
+    display: flex;
+    gap: .2rem;
+    align-items: center;  
+}
+header .wrapper span{
+    font-family: Open Sans;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 15.3px;
+    text-align: center;
+    color: #FFFFFF;
+}
+header .wrapper span > svg{
+    color: red;
+    width: 17px;
+    height: 17px;
+}

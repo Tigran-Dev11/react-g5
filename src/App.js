@@ -1,9 +1,17 @@
 import "./App.css";
+import Router from "./router/routes";
+import React from "react";
+import Header from "./components/header";
+import Footer from "./components/footer";
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to React App</h1>
+      <Header/>
+      <Router/>
+      <Footer/>
     </div>
   );
 }
