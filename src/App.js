@@ -1,10 +1,9 @@
 import "./App.css";
+import Header from "../src/webPages/header/index"
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to React App</h1>
-    </div>
+    <Header/>
   );
 }
 
