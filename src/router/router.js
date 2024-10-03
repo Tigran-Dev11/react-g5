@@ -11,6 +11,7 @@ export const router = [
     {
       path: ROUTES.home,
       component: Home,
+      title: "Home",
     },
     {
       path: ROUTES.contact,
