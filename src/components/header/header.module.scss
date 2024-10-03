@@ -1,0 +1,25 @@
+.Header {
+ 
+  height: 60px;
+  background-color: bisque;
+  padding-inline: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 70px;
+    height: 50px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    li {
+      font-size: 20px;
+      color: blue;
+    }
+  }
+}

@@ -3,5 +3,6 @@ export const ROUTES = {
   contact: "/contact-us",
   login: "/login",
   register: "/register",
-  product: '/product'
+  product: "/product",
+  todos: "/todos",
 };
