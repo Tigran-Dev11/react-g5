@@ -3,7 +3,7 @@ import Header from "../src/webPages/header/index"
 
 function App() {
   return (
-    <Header/>
+    <Header />
   );
 }
 
