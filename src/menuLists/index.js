@@ -1,10 +1,8 @@
 export const MENU={
     HOME:"/",
-    DOCUMENT:"/docs",
-    TOOLS:"/tools",
-    FREATURES:"/freatures",
-    PRICING:"/pricing",
-    JOBS:"/jobs"
+    CONTACT:"/contact",
+    LOGIN:"/login",
+    REGISTRATION:"/register"
 }
 
 export const menuList = [
@@ -15,27 +13,17 @@ export const menuList = [
   },
   {
     id: 2,
-    name: "Docs",
-    href: MENU.DOCUMENT,
+    name: "Contact",
+    href: MENU.CONTACT,
   },
   {
     id: 3,
-    name: "Tools",
-    href: MENU.TOOLS,
+    name: "Log-in",
+    href: MENU.LOGIN,
   },
   {
     id: 4,
-    name: "Freatures",
-    href: MENU.FREATURES,
-  },
-  {
-    id: 5,
-    name: "Pricing",
-    href: MENU.PRICING,
-  },
-  {
-    id: 6,
-    name: "Jobs",
-    href: MENU.JOBS,
-  },
+    name: "Register",
+    href: MENU.REGISTRATION,
+  }
 ];

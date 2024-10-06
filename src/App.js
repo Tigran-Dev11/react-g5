@@ -1,9 +1,16 @@
 import "./App.css";
-import Header from "../src/webPages/header/index"
-
+import {Register}from "../src/webParts/register/index"
+import {Login} from "./webParts/login/index"
+import { Contact } from "./webParts/contact";
+import {Home} from "./webParts/home/index"
+import {Router} from "../src/router/routes"
 function App() {
   return (
-    <Header />
+    <Home/>,
+    <Register />,
+    <Login />,
+    <Contact/>,
+    <Router/>
   );
 }
 

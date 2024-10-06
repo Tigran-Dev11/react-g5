@@ -4,7 +4,7 @@ import logo from "../../webImages/HelloUI.png";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className="header">
       <NavLink to={MENU.HOME}>

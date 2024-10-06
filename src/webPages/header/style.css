@@ -4,10 +4,11 @@
 .header{
     border: 1px solid black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-radius:6px;
-    padding-inline:106px;
+    padding:20px 100px;
+    background-color: rgb(229, 229, 243);
 }
 
 img{
