@@ -3,6 +3,6 @@ export const ROUTES = {
   contact: "/contact-us",
   login: "/login",
   register: "/register",
-  product: "/product",
+  products: "/products",
   todos: "/todos",
 };

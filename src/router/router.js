@@ -2,6 +2,7 @@ import Contact from "../pages/contact";
 import Home from "../pages/home";
 import Login from "../pages/login";
 import NotFound from "../pages/not-found";
+import Products from "../pages/products";
 import Register from "../pages/register";
 import Todo from "../pages/todo";
 import { ROUTES } from "../utils/constant";
@@ -29,6 +30,10 @@ export const router = [
   },
   {
     path: ROUTES.todos,
-    component:Todo
-  }
+    component: Todo,
+  },
+  {
+    path: ROUTES.products,
+    component: Products,
+  },
 ];
