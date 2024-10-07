@@ -1,6 +1,6 @@
 import { menuList } from "../../menuLists/index";
 import {MENU} from "../../menuLists/index"
-import logo from "../../webImages/HelloUI.png";
+import logo from "../../assets/Images/HelloUI.png";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 

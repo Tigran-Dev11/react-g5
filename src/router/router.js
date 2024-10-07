@@ -1,12 +1,14 @@
-import { MENU } from "../menuLists/index";
-import { Home } from "../webParts/home/index";
-import { Login } from "../webParts/login/index";
-import { Register } from "../webParts/register/index";
-import { Contact } from "../webParts/contact/index";
+import { MENU } from "../menuLists";
+import { Contact } from "../pages/contact";
+import { Home } from "../pages/home";
+import { Login } from "../pages/login";
+import { Register } from "../pages/register";
+
+
 
 export const router=[
     {
-        path:MENU.HOME,
+        path: "/",
         component:Home,
     },
 
@@ -17,7 +19,7 @@ export const router=[
     
     {
         path:MENU.REGISTRATION,
-        component:Register,
+        component :Register,
     },
     
     {

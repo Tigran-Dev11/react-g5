@@ -1,5 +1,5 @@
 import "../about/style.css"
-import {IMAGES} from "../webImages/index"
+import { IMAGES } from "../assets/Images";
 export const About = () => {
   return (
     <div className="container">
