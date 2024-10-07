@@ -1,17 +1,14 @@
-import "../contact/style.css"
-import {Header} from "../../webPages/header/index"
-import {Footer} from "../../webPages/footer/index";
+import "../contact/style.css";
+import { Header } from "../../webPages/header/index"
+import { Footer } from "../../webPages/footer/index"
+import {About} from "../../about/index"
 
-export const Contact=()=>{
-    return <div>
-        <Header/>
-        <h1>Contact Information</h1>
-        <div>
-            <div>
-
-               <p>Instagram:saqbaghdyan</p>     
-            </div>
-        </div>
-        <Footer/>
+export const Contact = () => {
+  return (
+    <div className="container">
+      <Header />
+      <About />
+      <Footer />
     </div>
-}
+  );
+};

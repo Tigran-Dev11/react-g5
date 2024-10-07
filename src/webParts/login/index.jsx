@@ -1,12 +1,13 @@
 import { Header } from "../../webPages/header/index";
+import {LoginForm} from "../../loginForm/index"
 import {Footer} from "../../webPages/footer/index"
 import "../login/style.css";
 
 export const Login = () => {
   return (
-    <div>
+    <div className="loginPage">
       <Header />
-      <h1>LoginPage</h1>
+      <LoginForm/>
       <Footer/> 
     </div>
   );

@@ -1,0 +1,38 @@
+.registerPage {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerPage form {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+}
+
+form button {
+  width: 20%;
+  height: 30px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:10px;
+
+}
+
+.checkbox input{
+    width: 15px;
+    height: 15px;
+}
