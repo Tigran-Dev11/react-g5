@@ -1,0 +1,50 @@
+
+.form{
+    width: 300px;
+    form{
+        width: 300px;
+        display: flex;
+    }
+    input{
+        width: 87%;
+        padding: 5px;
+    }
+    button{
+        padding: 2px;
+        cursor: pointer;
+    }
+    .select{
+       min-width: 70px;
+        select{
+            width: 100%;
+            height: 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+    .todo_box{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+       .ul{
+        width: 100%;
+            .li{
+                padding: 3px;
+                border: 1px solid black;
+                background-color: #D989B5;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+            }
+            .done{
+                background-color: #BED754;
+                border: 1px solid black;
+                text-decoration: line-through;
+                padding: 3px;
+                display: flex;
+                justify-content: space-between;
+            }
+       }  
+    }
+}
+
