@@ -13,6 +13,7 @@
         padding: 2px;
         cursor: pointer;
     }
+    
     .select{
        min-width: 70px;
         select{
@@ -35,7 +36,14 @@
                 list-style: none;
                 display: flex;
                 justify-content: space-between;
+                // span{
+                //     background-color: red;
+                //     display: flex;
+                   
+                // }
+                
             }
+            
             .done{
                 background-color: #BED754;
                 border: 1px solid black;

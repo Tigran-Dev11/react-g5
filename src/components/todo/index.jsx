@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./todo.module.scss";
 import { v4 as uuidv4 } from "uuid";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -13,7 +13,7 @@ const Todo = () => {
     const onChange = (e) => {
         setValue(e.target.value)
     };
-    
+     
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -28,12 +28,14 @@ const Todo = () => {
             completed: false
         };
         setTodos([...todos, todo]);
+        localStorage.setItem("todoList", JSON.stringify(...todos, todo)) 
         setValue("")
     };
 
     const deleteTodo = (id) => {
             const filteredTodos = todos.filter((todo) => todo.id !== id);
-            setTodos(filteredTodos)  
+            setTodos(filteredTodos);
+            localStorage.setItem("todoList", JSON.stringify( filteredTodos))
     }; 
 
     const checkedTodo = (id) => {
@@ -42,10 +44,35 @@ const Todo = () => {
               return todo
             })
             setTodos(checked)
-           console.log(checked);       
+            localStorage.setItem("todoList", JSON.stringify( checked))
+    }
+
+    const allTodos = () => {
+      const all = JSON.parse(localStorage.getItem("todoList"));
+      setTodos(all)
+    }
+
+    const completedTodos = () => {
+       const items = JSON.parse(localStorage.getItem("todoList"));
+       const completed = items.filter(item => item.completed === true)
+       setTodos(completed)
+    }
+    const unCompletedTodos = () => {
+        const items = JSON.parse(localStorage.getItem("todoList"));
+        const uncompleted = items.filter(item => item.completed !== true)
+        setTodos(uncompleted)
+    }
+
+    const handelSelect = (e) => {
+        if(e.target.value === "all") allTodos()
+        if(e.target.value === "completed")  completedTodos() 
+        if(e.target.value === "uncompleted") unCompletedTodos()
     }
          
-   
+   useEffect(() => {
+        const items = localStorage.getItem("todoList");
+        setTodos(JSON.parse(items))
+   }, [])
 
     return(
         <div className={style.form}> 
@@ -53,13 +80,14 @@ const Todo = () => {
                 <input type="text" onChange={onChange} value={value}/>
                 <button>Add</button>
                 <div className={style.select}>
-                    <select>
+                    <select onChange={handelSelect}>
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">Uncompleted</option>
                     </select>
                </div>
             </form>
+
             <div className={style.todo_box}>
                 <ul className={style.ul}>
                     {
