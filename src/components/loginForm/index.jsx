@@ -1,4 +1,4 @@
-import "../loginForm/style.css";
+import "./style.css";
 export const LoginForm = () => {
   return (
     <div className="loginPage">

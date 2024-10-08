@@ -1,4 +1,4 @@
-import "../registerForm/style.css"
+import "./style.css"
 export const RegisterForm=()=>{
     return (
       <div className="registerPage">
