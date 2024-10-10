@@ -1,0 +1,34 @@
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    li{
+        a{
+            color: #FFFFFF;
+            font-size: 15px;
+            transition: .5s linear;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        a:hover{
+            color: #99823D;
+            transition: .3s linear;
+        }
+       
+    }
+}
+.link{
+    color: #FFFFFF;
+    transition: .1s linear;
+    svg{
+   
+    font-size: 25px;
+    }
+   
+   
+}
+.link:hover{
+    color: #99823D;
+    transition: .1s linear;
+}

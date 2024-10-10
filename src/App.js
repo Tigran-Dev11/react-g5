@@ -1,11 +1,17 @@
 import "./App.css";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Router from "./router/routes"
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to React App</h1>
+    <div>
+      <Header/>
+      <Router/>
+      <Footer/>
     </div>
-  );
+    
+  )
 }
 
 export default App;
