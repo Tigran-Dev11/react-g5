@@ -1,6 +1,6 @@
 export const MENU={
     HOME:"/",
-    CONTACT:"/contact",
+    ABOUT:"/about",
     LOGIN:"/login",
     REGISTRATION:"/register",
     PRODUCTS:"/products"
@@ -14,8 +14,8 @@ export const menuList = [
   },
   {
     id: 2,
-    name: "Contact",
-    href: MENU.CONTACT,
+    name: "About",
+    href: MENU.ABOUT,
   },
   {
     id: 3,

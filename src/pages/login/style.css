@@ -1,4 +1,4 @@
-.loginPage{
-        min-height: 100vh;
+.loginPage {
+  min-height: 100vh;
+  background: linear-gradient(white, silver);
 }
-

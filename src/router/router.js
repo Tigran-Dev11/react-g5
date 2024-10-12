@@ -1,5 +1,5 @@
 import { MENU } from "../components/menuLists";
-import { Contact } from "../pages/contact";
+import { About } from "../pages/about";
 import { Home } from "../pages/home";
 import { Login } from "../pages/login";
 import { Register } from "../pages/register";
@@ -23,8 +23,8 @@ export const router=[
     },
     
     {
-        path:MENU.CONTACT,
-        component:Contact,
+        path:MENU.ABOUT,
+        component:About,
     },
     
     {

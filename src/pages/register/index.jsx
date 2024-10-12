@@ -3,7 +3,7 @@ import "../register/style.css";
 
 export const Register = () => {
   return (
-    <div>
+    <div className="registerPage">
       <RegisterForm />
     </div>
   );

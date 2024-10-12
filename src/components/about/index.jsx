@@ -1,6 +1,6 @@
-import "../about/style.css"
-import { IMAGES } from "../assets/Images";
-export const About = () => {
+import "./style.css"
+import { IMAGES } from "../../assets/Images";
+export const Info = () => {
   return (
     <div className="container">
       <h1>Սարգիս Գուրգենի Բաղդյան</h1>
