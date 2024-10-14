@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import "./style.css";
+import { NavLink, useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
 
 const Products = () => {
   const [number, setNumber] = useState(0);
+  const navigation = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -66,6 +69,14 @@ const Products = () => {
             <div key={product.id} className="product-item">
               <img src={product.image} alt="" />
               <h3>{product.title}</h3>
+              <button
+                onClick={() => {
+                  navigation(`${ROUTES.products}/${product.id}`);
+                }}
+              >
+                learn more
+              </button>
+              {/* <NavLink to={`${ROUTES.products}/${product.id}`}>product</NavLink> */}
             </div>
           );
         })}
