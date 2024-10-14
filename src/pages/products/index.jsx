@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Product } from "../product";
 import { IMAGES } from "../../assets/Images";
+import {Loading} from "../../components/loading"
 import "../products/style.css";
 
 export const Products = () => {
@@ -25,7 +26,7 @@ export const Products = () => {
   }, []);
 
   if (loading) {
-    <h1>Loading</h1>
+    return <Loading />
   }
 
   return (

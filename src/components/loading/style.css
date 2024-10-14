@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.loading .balls1 {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  animation-delay: 1s;
+}
+
+.loading .balls2 {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  animation-delay: 6s;
+}
+
+.loading .balls3 {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.loading .balls4 {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  animation-delay: 5s;
+}
+
+.loading .balls5 {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  animation-delay: 3s;
+}
+
+.loading .balls6 {
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+  animation-delay: 4s;
+}
+
+@keyframes spin {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.loading .zahlaGorc {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.zahlaGorc .ballsPlace {
+  display: flex;
+  gap: 18px;
+}
+
+.ballsPlace .balls {
+  width: 12x;
+  height: 12px;
+  display: flex;
+  border-radius: 50%;
+}
