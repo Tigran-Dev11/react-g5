@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react"
-import s from "./products.module.scss"
+import { useEffect, useState } from "react";
+import s from "./products.module.scss";
+import { FaRegHeart } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
+
 
 
 
@@ -43,8 +46,17 @@ const Products = () => {
                             </a>
                             
                             <div className={s.descr}>
-                             <h2>{prod.title.lenght !== 2 ? prod.title.slice(0, 20): prod.title}</h2>
-                             <span>{prod.price}$</span>
+                                <h2>{prod.title.lenght !== 2 ? prod.title.slice(0, 20): prod.title}</h2>
+                                <div className={s.price}>
+                                    <span>{prod.price}$</span>
+                                    <div>
+                                        <span><FaRegHeart />
+                                    </span>
+                                    <span><MdOutlineShoppingCart />
+                                    </span>
+                                    </div>
+                                    
+                               </div>
                             </div>
                         </div>
                     ) 

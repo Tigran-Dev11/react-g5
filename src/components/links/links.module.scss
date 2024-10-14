@@ -7,28 +7,24 @@ ul{
         a{
             color: #FFFFFF;
             font-size: 15px;
+            font-weight: 700;
             transition: .5s linear;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
         a:hover{
-            color: #99823D;
-            transition: .3s linear;
+            color: #DC5F00;
+            transition: .5s linear;
         }
-       
     }
 }
 .link{
     color: #FFFFFF;
-    transition: .1s linear;
     svg{
-   
+    margin-right: 5px;
     font-size: 25px;
     }
-   
-   
 }
 .link:hover{
-    color: #99823D;
-    transition: .1s linear;
+    color: #DC5F00;
 }

@@ -1,0 +1,30 @@
+.notFound{
+    height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 120px 20px 0 20px;
+   
+    h2{
+        font-size: 70px;
+        font-weight: 500;
+        color: #1E1E1E;
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 400;
+    }
+    p{
+        font-size: 20px;
+    }
+    button{
+        background-color:#FFC701 ;
+        font-size: 25px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+}
