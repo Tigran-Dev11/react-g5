@@ -3,7 +3,8 @@ export const MENU={
     ABOUT:"/about",
     LOGIN:"/login",
     REGISTRATION:"/register",
-    PRODUCTS:"/products"
+    PRODUCTS:"/products",
+    PRODUCT:"/products/prodID"
 }
 
 export const menuList = [
@@ -30,6 +31,11 @@ export const menuList = [
   {
     id:5,
     name:"Products",
-    href:MENU.PRODUCTS
+    href:MENU.PRODUCTS,
+  },
+  {
+    id:6,
+    name:"Product",
+    href:MENU.PRODUCT,
   }
 ];

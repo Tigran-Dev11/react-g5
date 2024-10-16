@@ -4,6 +4,7 @@ import { Home } from "../pages/home";
 import { Login } from "../pages/login";
 import { Register } from "../pages/register";
 import { Products } from "../pages/products";
+import { Product } from "../pages/product";
 
 
 export const router=[
@@ -32,5 +33,10 @@ export const router=[
         path:MENU.PRODUCTS,
         component:Products,
     
+    },
+
+    {
+        path:MENU.PRODUCT,
+        component:Product,
     }
 ]

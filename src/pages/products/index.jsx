@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigation } from "react-router-dom";
 import { Product } from "../product";
 import { IMAGES } from "../../assets/Images";
-import {Loading} from "../../components/loading"
+import { Loading } from "../../components/loading";
+import {MENU} from "../../components/menuLists"
 import "../products/style.css";
 
 export const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const navigation=useNavigation()
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -26,7 +27,7 @@ export const Products = () => {
   }, []);
 
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
@@ -50,6 +51,11 @@ export const Products = () => {
                 <p>{product.rating.rate}</p>
                 <img src={IMAGES.favIcon} alt="FavIcon" />
               </div>
+              <button
+                onClick={() => {
+                  navigation(`${MENU.PRODUCTS}/${Product.id}`);
+                }}
+              >Button</button>
             </div>
           </div>
         );
