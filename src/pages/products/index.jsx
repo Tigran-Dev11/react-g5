@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useNavigation } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Product } from "../product";
 import { IMAGES } from "../../assets/Images";
 import { Loading } from "../../components/loading";
@@ -9,7 +9,9 @@ import "../products/style.css";
 export const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigation=useNavigation()
+
+  const navigation=useNavigate()
+
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -42,9 +44,7 @@ export const Products = () => {
             <NavLink>
               <img src={product.image} alt={product.name} />
             </NavLink>
-            <h2>
-              <NavLink to={Product}>{product.title}</NavLink>
-            </h2>
+           
             <div className="info">
               <p>{product.price}$</p>
               <div className="rate">
@@ -53,7 +53,7 @@ export const Products = () => {
               </div>
               <button
                 onClick={() => {
-                  navigation(`${MENU.PRODUCTS}/${Product.id}`);
+                  navigation(`${MENU.PRODUCTS}/${product.id}`);
                 }}
               >Button</button>
             </div>
