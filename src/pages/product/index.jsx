@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {Loading} from "../../components/loading"
+import { Loading } from "../../components/loading";
 
 export const Product = () => {
   const [product, setProduct] = useState(null);
