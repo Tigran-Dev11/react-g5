@@ -6,6 +6,10 @@ export const Product = () => {
   const [product, setProduct] = useState(null);
   const { prodId } = useParams();
 
+
+  console.log(prodId);
+  
+
   useEffect(() => {
     const getSingleProduct = async () => {
       try {

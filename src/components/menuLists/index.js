@@ -4,7 +4,7 @@ export const MENU={
     LOGIN:"/login",
     REGISTRATION:"/register",
     PRODUCTS:"/products",
-    PRODUCT:"/products/prodID"
+    PRODUCT:"/products/:prodId"
 }
 
 export const menuList = [
