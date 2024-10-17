@@ -1,23 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   background: linear-gradient(white, silver);
+  padding:40px ;
 }
 
 .product {
-  padding: 20px 10px;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  border:1px solid gray ;
+  font-family: Afacad Flux;
+  padding-top:10px;
+  margin:10px;
 }
 
 .product h2 {
   font-size: 20px;
+  cursor: default;
 }
 
 h2 a {
@@ -32,7 +45,7 @@ h2 a {
 
 .info {
   display: flex;
-  gap: 120px;
+  gap: 120px; 
   align-items: center;
   padding-bottom: 5px;
 }
@@ -51,4 +64,10 @@ h2 a {
 .rate img {
   width: 20px;
   height: 20px;
+
+}
+
+.rate button{
+  cursor: pointer;
+  border:none;
 }

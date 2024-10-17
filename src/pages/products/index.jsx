@@ -1,24 +1,22 @@
 import { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import { Product } from "../product";
+import {  useNavigate } from "react-router-dom";
 import { IMAGES } from "../../assets/Images";
 import { Loading } from "../../components/loading";
-import {MENU} from "../../components/menuLists"
+import { MENU } from "../../components/menuLists";
 import "../products/style.css";
 
 export const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const navigation=useNavigate()
+  const navigation = useNavigate();
 
   useEffect(() => {
     const getProduct = async () => {
       try {
         const data = await fetch("https://fakestoreapi.com/products");
         const products = await data.json();
-        console.log(products);
-
+        
         setProducts(products);
       } catch (error) {
       } finally {
@@ -41,21 +39,22 @@ export const Products = () => {
 
         return (
           <div key={product.id} className="product">
-            <NavLink>
-              <img src={product.image} alt={product.name} />
-            </NavLink>
-           
+            <img src={product.image} alt={product.name} />
+
+            <h2>{product.title}</h2>
             <div className="info">
               <p>{product.price}$</p>
               <div className="rate">
                 <p>{product.rating.rate}</p>
                 <img src={IMAGES.favIcon} alt="FavIcon" />
+                <button
+                  onClick={() => {
+                    navigation(`${MENU.PRODUCTS}/${product.id}`);
+                  }}
+                >
+                  Learn more...
+                </button>
               </div>
-              <button
-                onClick={() => {
-                  navigation(`${MENU.PRODUCTS}/${product.id}`);
-                }}
-              >Button</button>
             </div>
           </div>
         );
