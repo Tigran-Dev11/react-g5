@@ -5,7 +5,7 @@ import s from "./footer.module.scss";
 
 const Footer = () => {
     return(
-        <footer>
+        <footer className={s.footer}>
           <Logo/>
           <Links linksArray={socialLinks}/>
         </footer>

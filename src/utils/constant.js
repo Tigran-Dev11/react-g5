@@ -11,6 +11,8 @@ export const ROUTES = {
     contact: "/contact",
     products: "/products",
     product: "/products/:prodId",
+    register: "/register",
+    login: "/login"
 };
 
 export const menuLinks = [
@@ -28,8 +30,12 @@ export const menuLinks = [
     },
     {
         title: "Products",
-        path:ROUTES.products
-    }
+        path:ROUTES.products,
+    },
+    {
+        title: "Register",
+        path:ROUTES.register,
+    },
 ]
 
 export  const socialLinks = [

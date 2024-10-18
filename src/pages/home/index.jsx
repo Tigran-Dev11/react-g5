@@ -1,8 +1,9 @@
-import "./home.module.scss"
+import s from "./home.module.scss"
 
 const Home = () => {
     return(
-        <div>Home</div>
+        <div className={s.home}>Home
+        </div>
     )
 }
 export default Home

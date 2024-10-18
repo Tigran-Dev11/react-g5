@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import s from "./products.module.scss";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
+import Button from "../../common/button";
+import Loading from "../loading";
 
 
 
@@ -29,13 +32,12 @@ const Products = () => {
             setLoading(false)
         }
        }
-
-       getProducts()
+       getProducts();
     }, [])
 
-    if(loading){
-        return <h1>Loading...</h1>
-    }
+    if (loading) {
+        return <Loading/>;
+      }
     
     return(
         <div className={s.productList}>
@@ -61,7 +63,8 @@ const Products = () => {
                                     
                                </div>
                             </div>
-                            <button onClick={() => navigate(`${Routes.products}/ ${prod.id}`)}>More...</button>
+                            <Button click={() => navigate(`${ROUTES.products}/${prod.id }`)} text="More..."/>
+                           
                         </div>
                     ) 
                 })
