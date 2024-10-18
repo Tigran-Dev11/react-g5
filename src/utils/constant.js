@@ -9,7 +9,8 @@ export const ROUTES = {
     home: "/",
     about: "/about",
     contact: "/contact",
-    products: "/products"
+    products: "/products",
+    product: "/products/:prodId",
 };
 
 export const menuLinks = [

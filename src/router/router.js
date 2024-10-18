@@ -24,6 +24,10 @@ export const router = [
         component:Products,
     },
     {
+        path:ROUTES.product,
+        component: Product
+    },
+    {
         path:"*",
         component:NotFound,
     },

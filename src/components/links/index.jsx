@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 const Links = ({ linksArray }) => {
   return (
     <div>
-      {linksArray.socialLinks?.map((link) => (
-        <NavLink key={link.id} className={s.link} to={link.href}>
-          {link.icon}
+      {linksArray?.map((link) => (
+        <NavLink key={link.id ? link.id : link.path} className={link.icon ? s.link : s.menu} to={link.href ? link.href: link.path}>
+          {link.icon ? link.icon : link.title}
         </NavLink>
       ))}
-      <ul></ul>
+      
     </div>
   );
 };
