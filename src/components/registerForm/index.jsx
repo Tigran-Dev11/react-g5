@@ -2,14 +2,21 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { VALIDATION } from "../../utils/validationSchema";
 import "./style.css";
+
+
+
 export const RegisterForm = () => {
+
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(VALIDATION.registerSchema),
+    resolver: yupResolver(VALIDATION.registerValidation),
   });
+
+  
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -47,7 +54,8 @@ export const RegisterForm = () => {
         <p>Date Birthday</p>
         <input type="date" />
         <div className="checkbox">
-          <input type="checkbox" />
+          <input type="checkbox"  {...register('isActive')}/>
+          <p>{errors?.isActive?.message}</p>
           <p>Remember me</p>
         </div>
         <button>Registration</button>
