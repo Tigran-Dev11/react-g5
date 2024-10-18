@@ -1,0 +1,32 @@
+.register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        width: 400px;
+        input{
+            width: 100%;
+            padding: 10px 10px;
+            margin-bottom: 3px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        p{
+            color: #DC5F00;
+        }
+        button{
+          font-size: 18px;
+          border-radius: 10px;
+          padding: 10px 30px;
+          cursor: pointer;
+          transition: .3s linear;
+        }
+        button:hover{
+            background-color: #DC5F00;
+            border-color: white;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.loading{
+    width: 150px;
+    height: 140px;
+    background-color: rgb(237, 109, 4);
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;  
+    animation-name: example;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes example {
+    0%   {background-color:rgb(14, 12, 7); left:100px; top:-100px;}
+    25%  {background-color:yellow; left:150px; top:-150px;}
+    50%  {background-color:rgb(227, 152, 23); left:200px; top:100px;}
+    75%  {background-color:rgb(184, 244, 132); left:-200px; top:200px;}
+    100% {background-color:rgb(238, 232, 223); left:100px; top:-100px;}
+  }
