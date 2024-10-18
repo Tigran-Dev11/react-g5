@@ -33,7 +33,6 @@ const Register = () => {
                 <input type="password" placeholder="confirm password" {...register("confirmPassword")}/>
                 <p>{errors?.confirmPassword?.message}</p>
                 <Button text="Register"/>
-                
             </form>
         </div>
     )
