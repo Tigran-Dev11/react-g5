@@ -1,39 +1,50 @@
-import { useRef } from "react";
+import { useForm } from "react-hook-form";
+import { Input } from "../../common/input";
+import s from "./login.module.scss";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { SCHEMAS } from "../../utils/validation-schema";
 
 const Login = () => {
-  const ref = useRef();
 
-  const numberRef = useRef(0);
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    setError,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(SCHEMAS.loginSchema),
+  });
 
-  const focusInput = () => {
-    ref.current.focus();
+  const onSubmit = (data) => {
+
+    reset()
   };
 
-  let text = "text";
-
-  const increment = () => {
-    console.log("call increment");
-
-    numberRef.current = numberRef.current + 1;
-  };
-
-  const showResult = () => {
-    console.log(numberRef.current);
+  const AddDefaultEmail = () => {
+    setValue("email", "default@example.com");
   };
 
   return (
-    <div>
-      <input type="text" ref={ref} />
-      <button className="click-me" onClick={focusInput}>
-        click me
-      </button>
+    <div className={s.loginFormContainer}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Input
+          type="text"
+          placeholder="email"
+          register={register("email")}
+          error={errors?.email?.message}
+        />
+        <Input
+          type="password"
+          placeholder="password"
+          register={register("password")}
+          error={errors?.password?.message}
+        />
+        <button>login</button>
+      </form>
 
-      <p>{text}</p>
-      <button onClick={increment}>increment number</button>
-      <br />
-      {numberRef.current}
-
-      <button onClick={showResult}>show result</button>
+      <button onClick={AddDefaultEmail}>ADD DEFAULT EMAIL</button>
     </div>
   );
 };

@@ -1,0 +1,13 @@
+.loginFormContainer {
+  padding-inline: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    padding-block: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

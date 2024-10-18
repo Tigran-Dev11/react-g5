@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./style.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
+import { useFetch } from "../../hooks/use-fetch";
 
 const Products = () => {
   const [number, setNumber] = useState(0);
   const navigation = useNavigate();
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  
+  const { data, loading } = useFetch({
+    url: "https://fakestoreapi.com/products",
+  });
 
   const increment = () => {
     setNumber(number + 1);
@@ -39,21 +42,6 @@ const Products = () => {
 
   //   console.log('hellow');
 
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const data = await fetch("https://fakestoreapi.com/products");
-        const products = await data.json();
-
-        setProducts(products);
-      } catch (error) {
-      } finally {
-        setLoading(false);
-      }
-    };
-    getProduct();
-  }, []);
-
   if (loading) {
     return <h1>Loading...</h1>;
   }
@@ -64,7 +52,7 @@ const Products = () => {
       <button onClick={increment}>increment</button>
 
       <div className="product-list">
-        {products?.map((product) => {
+        {data?.map((product) => {
           return (
             <div key={product.id} className="product-item">
               <img src={product.image} alt="" />
