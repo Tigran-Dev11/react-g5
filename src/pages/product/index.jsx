@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Loading } from "../../components/loading";
+import {IMAGES} from  "../../assets/Images/index"
+import "../products/style.css";
 
 export const Product = () => {
   const [product, setProduct] = useState(null);
   const { prodId } = useParams();
 
-
   console.log(prodId);
-  
 
   useEffect(() => {
     const getSingleProduct = async () => {
@@ -27,10 +27,17 @@ export const Product = () => {
   return (
     <div className="product">
       {product && (
-        <div>
-          <h1>{product.title}</h1>
+        <div key={product.id} className="product">
           <img src={product.image} alt={product.name} />
-          <p>{product.description}</p>
+
+          <h2>{product.title}</h2>
+          <div className="info">
+            <p>{product.price}$</p>
+            <div className="rate">
+              <p>{product.rating.rate}</p>
+              <img src={IMAGES.favIcon} alt="FavIcon" />
+            </div>
+          </div>
         </div>
       )}
 
