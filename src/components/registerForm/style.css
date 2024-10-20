@@ -6,7 +6,7 @@
 
 .registerForm {
   width: 40%;
-  height: 300px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
