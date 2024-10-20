@@ -27,7 +27,7 @@ export const Product = () => {
   return (
     <div className="product">
       {product && (
-        <div key={product.id} className="product">
+        <div key={product.id}>
           <img src={product.image} alt={product.name} />
 
           <h2>{product.title}</h2>
