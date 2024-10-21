@@ -10,6 +10,5 @@ export const loginValidation = yup
       .string()
       .required()
       .oneOf([yup.ref("password"), null], "Passwords must match"),
-    isActive: yup.boolean().required(),
   })
   .required();

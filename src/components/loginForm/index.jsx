@@ -13,11 +13,18 @@ export const LoginForm = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
-  const onSubmit = (data) => {
-    localStorage.setItem("data", JSON.stringify(data));
-    navigate("/home");
+  const onSubmit = (body) => {
+    let data = localStorage.getItem("data");
+
+    if (data) {
+      let response = JSON.parse(data);
+
+      if (body.email === response.email && body.password === response.password) {
+        navigate("/home");
+      }
+    }
   };
-  
+
   return (
     <div className="loginPage">
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
