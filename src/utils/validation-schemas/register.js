@@ -7,11 +7,8 @@ export const registerSchema = yup.object({
     lastName: yup.string().required().min(3).max(20),
     email: yup.string().required().email(),
     password: yup.string().required().min(8).max(15),
-    confirmPassword: yup.string().required().oneOf([yup.ref("password"), null, "Passwords must match"])
+    confirmPassword: yup.string().required().oneOf([yup.ref("password"), null, "Passwords must match"]),
+    isActive:yup.boolean().required()
 }).required();
 
 
-export const loginSchema = yup.object({
-    email: yup.string().required().email(),
-    password: yup.string().required().min(8).max(15)
-}).required();

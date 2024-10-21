@@ -1,45 +1,28 @@
-import { useEffect, useState } from "react";
 import s from "./product.module.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "../../common/button";
+import { useFetch } from "../../hooks/useFetch";
+import Loading from "../loading";
 
 const Product = () => {
-  const [product, setProduct] = useState(null);
   const { prodId } = useParams();
   const navigate = useNavigate();
+  const {data, loading} = useFetch({url: `https://fakestoreapi.com/products/${prodId}`})
+ 
 
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const data = await fetch(`https://fakestoreapi.com/products/${prodId}`);
-        const product = await data.json();
-
-        if (!product) {
-          setProduct(null);
-
-          return;
-        }
-
-        setProduct(product);
-      } catch (err) {
-        console.log(err.message);
-      }
-    };
-
-    prodId && getProduct();
-  }, [prodId]);
-
+ 
+  loading && <Loading/>
   return (
     <div className={s.cardWrapper}>
       <Button click={() => navigate(-1)} text={<IoIosArrowBack />} />
 
-      {product ? (
+      {data ? (
         <div className={s.productCard}>
-          <h2>{product.title}</h2>
-          <img src={product.image} alt="" />
+          <h2>{data.title}</h2>
+          <img src={data.image} alt="" />
           <div className={s.text}>
-            <div>{product.description}</div>
+            <div>{data.description}</div>
           </div>
         </div>
       ) : (

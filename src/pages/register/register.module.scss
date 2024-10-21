@@ -13,7 +13,7 @@
             border-radius: 10px;
             font-size: 18px;
         }
-        p{
+        span{
             color: #DC5F00;
         }
         button{
@@ -27,6 +27,10 @@
             background-color: #DC5F00;
             border-color: white;
             color: #fff;
+        }
+        .checkbox{
+            width: 20px;
+            height: 20px;
         }
     }
 }

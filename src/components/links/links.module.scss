@@ -1,21 +1,21 @@
-
 .menu {
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: 700;
-    transition: .5s linear;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.5s linear;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
 }
 
-.link{
-    color: black;
-    svg{
+.link {
+  color: black;
+  svg {
     margin-right: 5px;
     font-size: 25px;
-    }
+  }
 }
-.link:hover, .menu:hover{
-    color: #DC5F00;
+.link:hover,
+.menu:hover {
+  color: #dc5f00;
 }
