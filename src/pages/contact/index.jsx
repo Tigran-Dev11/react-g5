@@ -1,22 +1,22 @@
 import { useState } from "react";
+import * as S from "./styled";
+import Button from "../../common/button";
+import { ROUTES } from "../../utils/constant";
 
 const Contact = () => {
-  const [number, setNumber] = useState(0);
-
-  const plus = () => {
-    setNumber(number + 1);
-  };
-
-  const minus = () => {
-    setNumber(number - 1);
-  };
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div>
-      <h1>value = {number}</h1>
-      <button onClick={plus}>plus</button>
-      <button onClick={minus}>minus</button>
-    </div>
+    <S.ContactPageContainer isActive={isActive}>
+      <S.ContactPageTopPart>
+        <S.ContactPageTitle className={isActive ? "active" : ""}>
+          <S.ContactLink to={ROUTES.home}>Home</S.ContactLink>
+        </S.ContactPageTitle>
+      </S.ContactPageTopPart>
+      <S.ContactPageButtonPart>
+        <Button text="active State" click={() => setIsActive(!isActive)} />
+      </S.ContactPageButtonPart>
+    </S.ContactPageContainer>
   );
 };
 
