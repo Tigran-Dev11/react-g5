@@ -1,13 +1,19 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useNavigate } from "react-router-dom";
+import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
+
 import "./style.css";
 
-
-
 export const RegisterForm = () => {
+  const navigate = useNavigate();
 
-  
+  const onSubmit = (data) => {
+    localStorage.setItem("data", JSON.stringify(data));
+    navigate("/login");
+  };
+
   const {
     register,
     handleSubmit,
@@ -16,13 +22,7 @@ export const RegisterForm = () => {
     resolver: yupResolver(VALIDATION.registerValidation),
   });
 
-  
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
   console.log(errors);
-
   return (
     <div className="registerPage">
       <form className="registerForm" onSubmit={handleSubmit(onSubmit)}>
@@ -51,14 +51,7 @@ export const RegisterForm = () => {
           placeholder="password"
           {...register("confirmPassword")}
         />
-        <p>Date Birthday</p>
-        <input type="date" />
-        <div className="checkbox">
-          <input type="checkbox"  {...register('isActive')}/>
-          <p>{errors?.isActive?.message}</p>
-          <p>Remember me</p>
-        </div>
-        <button>Registration</button>
+        <Button text="Registration" />
       </form>
     </div>
   );
