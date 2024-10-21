@@ -7,20 +7,20 @@ import { VALIDATION } from "../../utils/validationSchema";
 import "./style.css";
 
 export const RegisterForm = () => {
+
   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
 
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
     navigate("/login");
   };
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(VALIDATION.registerValidation),
-  });
+  
 
   console.log(errors);
   return (

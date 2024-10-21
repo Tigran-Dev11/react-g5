@@ -1,16 +1,38 @@
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useNavigate } from "react-router-dom";
+import Button from "../../common/button";
+import { VALIDATION } from "../../utils/validationSchema";
 import "./style.css";
+
 export const LoginForm = () => {
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
+
+  const onSubmit = (data) => {
+    localStorage.setItem("data", JSON.stringify(data));
+    navigate("/home");
+  };
+  
   return (
     <div className="loginPage">
-      <form>
-        <h1>LoginPage</h1>
-        <input type="text" />
-        <input type="password" />
-        <div className="checkbox">
-          <input type="checkbox" />
-          <p>Remember me</p>
-        </div>
-        <button>Log-in</button>
+      <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
+        <h1>Log-in</h1>
+
+        <input type="email" placeholder="email" {...register("email")} />
+        <p>{errors?.email?.message}</p>
+
+        <input
+          type="password"
+          placeholder="password"
+          {...register("password")}
+        />
+        <p>{errors?.password?.message}</p>
+        <Button text="Log-in" />
       </form>
     </div>
   );
