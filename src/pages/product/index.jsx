@@ -12,7 +12,11 @@ const Product = () => {
  
 
  
-  loading && <Loading/>
+  if(loading) {
+    return <Loading />
+  }
+  
+
   return (
     <div className={s.cardWrapper}>
       <Button click={() => navigate(-1)} text={<IoIosArrowBack />} />
