@@ -9,8 +9,7 @@ export const LoginForm = () => {
   const navigate = useNavigate();
   const {
     register,
-    handleSubmit,
-    formState: { errors },
+    handleSubmit,    formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
   const onSubmit = (data) => {
