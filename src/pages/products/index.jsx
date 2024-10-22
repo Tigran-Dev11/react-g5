@@ -3,7 +3,7 @@ import {  useNavigate } from "react-router-dom";
 import { IMAGES } from "../../assets/Images";
 // import {Product} from "../product"
 import { Loading } from "../../components/loading";
-import { MENU } from "../../components/menuLists";
+import { MENU } from "../../utils/constant";
 import "../products/style.css";
 
 export const Products = () => {

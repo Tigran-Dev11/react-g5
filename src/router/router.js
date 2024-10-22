@@ -1,4 +1,4 @@
-import { MENU } from "../components/menuLists";
+import { MENU } from "../utils/constant";
 import { About } from "../pages/about";
 import { Home } from "../pages/home";
 import { Login } from "../pages/login";

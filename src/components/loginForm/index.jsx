@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
+import {Input} from "../../common/input"
 import "./style.css";
 
 export const LoginForm = () => {
@@ -29,15 +30,19 @@ export const LoginForm = () => {
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
         <h1>Log-in</h1>
 
-        <input type="email" placeholder="email" {...register("email")} />
-        <p>{errors?.email?.message}</p>
+        <Input
+          type="email"
+          placeholder="email"
+          register={register("email")}
+          error={errors?.email?.message}
+        />
 
-        <input
+        <Input
           type="password"
           placeholder="password"
-          {...register("password")}
+          register={register("password")}
+          error={errors?.password?.message}
         />
-        <p>{errors?.password?.message}</p>
         <Button text="Log-in" />
       </form>
     </div>

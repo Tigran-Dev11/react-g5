@@ -88,9 +88,3 @@
   gap: 18px;
 }
 
-.ballsPlace .balls {
-  width: 12x;
-  height: 12px;
-  display: flex;
-  border-radius: 50%;
-}

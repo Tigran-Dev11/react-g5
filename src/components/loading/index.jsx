@@ -1,4 +1,4 @@
-import "../loading/style.css";
+import "./style.css"
 export const Loading = () => {
   return (
     <div className="loading">
@@ -15,8 +15,5 @@ export const Loading = () => {
       </div>
       <div className="balls6"></div>
     </div>
-    // <div className="loader-container">
-    //   <div className="loader"></div>
-    // </div>
   );
 };
