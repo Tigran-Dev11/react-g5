@@ -17,7 +17,7 @@ export const RegisterForm = () => {
 
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
-    navigate("/login");
+    navigate('/login');
   };
 
   
