@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
 import {Input} from "../../common/input"
+import * as S from "./styled"
 import "./style.css";
 
 export const LoginForm = () => {
@@ -26,9 +27,9 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="loginPage">
-      <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
-        <h1>Log-in</h1>
+    <S.LoginComponent className="loginPage">
+      <S.LoginForm className="loginForm" onSubmit={handleSubmit(onSubmit)}>
+        <S.LoginTitle>Log-in</S.LoginTitle>
 
         <Input
           type="email"
@@ -44,7 +45,7 @@ export const LoginForm = () => {
           error={errors?.password?.message}
         />
         <Button text="Log-in" />
-      </form>
-    </div>
+      </S.LoginForm>
+    </S.LoginComponent>
   );
 };

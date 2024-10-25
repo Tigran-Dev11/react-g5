@@ -1,4 +1,5 @@
+import * as S from "./styled";
 const Button = ({ click, text }) => {
-  return <button onClick={click}>{text}</button>;
+  return <S.Button onClick={click}>{text}</S.Button>;
 };
 export default Button;

@@ -2,7 +2,7 @@ import { menuList } from "../menuLists";
 // import {MENU} from "../../utils/constant"
 import { IMAGES } from "../../assets/Images";
 // import { NavLink } from "react-router-dom";
-import * as S from "./style";
+import * as S from "./styled";
 
 const Header = () => {
   return (

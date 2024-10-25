@@ -1,58 +1,56 @@
+import * as S from "./styled"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import Button from "../../common/button";
+import { Input } from "../../common/input";
 import { VALIDATION } from "../../utils/validationSchema";
 
-import "./style.css";
-
 export const RegisterForm = () => {
-
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
+  } = useForm({ resolver: yupResolver(VALIDATION.registerSchema) });
 
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
-    navigate('/login');
+    navigate("/login");
   };
-
-  
 
   console.log(errors);
   return (
-    <div className="registerPage">
-      <form className="registerForm" onSubmit={handleSubmit(onSubmit)}>
-        <h1>RegisterPage</h1>
-        <input
+    <S.RegisterComponent>
+      <S.RegisterForm
+        className="registerForm"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <S.RegisterTitle>RegisterPage</S.RegisterTitle>
+        <Input
           type="text"
           placeholder="first-name"
           {...register("firstName")}
         />
-        <p>{errors?.firstName?.message}</p>
 
-        <input type="text" placeholder="last-name" {...register("lastName")} />
-        <p>{errors?.lastName?.message}</p>
+        <Input type="text" placeholder="last-name" {...register("lastName")} />
 
-        <input type="email" placeholder="email" {...register("email")} />
-        <p>{errors?.email?.message}</p>
+        <Input type="email" placeholder="email" {...register("email")} />
 
-        <input
+        <Input
           type="password"
           placeholder="password"
           {...register("password")}
         />
-        <p>{errors?.password?.message}</p>
-        <input
+
+        <Input
           type="password"
           placeholder="password"
           {...register("confirmPassword")}
         />
+
         <Button text="Registration" />
-      </form>
-    </div>
+      </S.RegisterForm>
+    </S.RegisterComponent>
   );
 };
