@@ -6,6 +6,7 @@ import Button from "../../common/button";
 import { SCHEMAS } from "../../utils/validation-schemas";
 import { Input } from "../../common/input";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { ROUTES } from "../../utils/constant";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Register = () => {
 
   const onSubmit = (data) => {
     setItem(data)
-    navigate("/login");
+    navigate(ROUTES.login);
     reset();
   };
 

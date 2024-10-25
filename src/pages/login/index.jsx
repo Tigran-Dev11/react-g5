@@ -5,6 +5,7 @@ import { SCHEMAS } from "../../utils/validation-schemas";
 import { useNavigate } from "react-router-dom";
 import Button from "../../common/button";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { ROUTES } from "../../utils/constant";
 
 const Login = () => {
   const {
@@ -22,7 +23,7 @@ const Login = () => {
       data?.email === regData?.email &&
       data?.password === regData?.password
     ) {
-      navigate("/products");
+      navigate(ROUTES.products);
       removeItem(data)
     } else {
       alert("Your email and password must match");

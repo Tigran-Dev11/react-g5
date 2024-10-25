@@ -8,11 +8,10 @@ import Loading from "../loading";
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useDebounce } from "../../hooks/useDebounce";
-// import { useDebounce } from "../../hooks/useDebounce";
 
 const Products = () => {
   const [searchValue, setSearchValue] = useState("");
-
+  const [filteredData, setFilteredData] = useState([]);
   const searchDebounceValue = useDebounce(searchValue, 1000);
 
   const navigate = useNavigate();
@@ -21,14 +20,15 @@ const Products = () => {
   });
 
   useEffect(() => {
-    console.log(searchDebounceValue, "searchDebounceValue");
+    const filteredData = data?.filter((item) =>
+      item.category.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setFilteredData(filteredData);
   }, [searchDebounceValue]);
 
-  // useEffect(() => {
-  //   console.log(searchValue);
-  // }, [searchValue]);
-
-  loading && <Loading />;
+  if (loading) {
+    <Loading />;
+  }
 
   return (
     <div className={s.products}>
@@ -36,15 +36,13 @@ const Products = () => {
 
       <input
         type="text"
+        placeholder="search by category"
         onChange={(e) => setSearchValue(e.target.value)}
         value={searchValue}
       />
 
-
-      <input type="checkbox" />
-
       <div className={s.productList}>
-        {data?.map((prod) => {
+        {(filteredData?.length ? filteredData : data)?.map((prod) => {
           return (
             <div className={s.productItem} key={prod.id}>
               <div>
