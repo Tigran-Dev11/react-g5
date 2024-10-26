@@ -1,4 +1,4 @@
-
+import * as S from "./styled"
 
 const Footer = () =>{
 

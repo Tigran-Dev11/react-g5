@@ -4,37 +4,33 @@ export const ROUTES = {
   CONTACT: "/contact",
   HELP: "/help",
   LOGIN: "/login-user",
+  ABOUT:"/about"
 };
 
 export const menus = [
   {
-    id: 1,
-    name: "Home",
-    href: ROUTES.HOME,
+    title:"Home",
+    path:ROUTES.HOME
+   
   },
   {
-    id: 2,
-    name: "Product",
-    href: ROUTES.PRODUCT,
+    title:"Product",
+    path:ROUTES.PRODUCT
   },
   {
-    id: 3,
-    name: "Contact",
-    href: ROUTES.CONTACT,
+    title:"Contact",
+    path:ROUTES.CONTACT
   },
   {
-    id: 4,
-    name: "Help",
-    href: ROUTES.HELP,
+    title:"Help",
+    path:ROUTES.HELP
   },
   {
-    id: 5,
-    name: "Login",
-    href: ROUTES.LOGIN,
+    title:"Login",
+    path:ROUTES.LOGIN
   },
   {
-    id: 6,
-    name: "About",
-    href: ROUTES.LOGIN,
+    title:"About",
+    path:ROUTES.ABOUT
   },
 ];

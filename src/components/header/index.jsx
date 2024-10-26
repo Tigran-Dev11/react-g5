@@ -1,19 +1,41 @@
+import { NavLink } from "react-router-dom";
 import { menus } from "../../utils/constants";
-import "./style.css";
+import * as S from "./styled"
+import { useState } from "react";
+
 
 const Header = () => {
+
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <header className="header-container">
-      <ul>
-        {menus.map((item,i) => {
+    <S.HeaderContainer isActive={isActive}>
+  
+      <S.HeaderLinksWrapper>
+      {menus.map((item,i) => {
           return (
-            <li key={`${item.name}-${i}`}>
-              <a href={item.href}>{item.name}</a>
-            </li>
+            <S.HeaderLink key={`${item.title}-${i}`}>
+              <NavLink href={item.path}>{item.title}</NavLink>
+            </S.HeaderLink>
           );
         })}
-      </ul>
-    </header>
+      </S.HeaderLinksWrapper>
+    </S.HeaderContainer>
+
+
+
+
+    // <header className="header-container">
+    //   <ul>
+    //     {menus.map((item,i) => {
+    //       return (
+    //         <li key={`${item.name}-${i}`}>
+    //           <a href={item.href}>{item.name}</a>
+    //         </li>
+    //       );
+    //     })}
+    //   </ul>
+    // </header>
   );
 };
 
