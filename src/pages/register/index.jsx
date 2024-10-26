@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMAS } from "../../utils/validation-schema";
 import "./style.css";
+import { useGlobalContext } from "../../hooks/use-global-context";
 
 const Register = () => {
   const {
@@ -15,7 +16,11 @@ const Register = () => {
     console.log(data);
   };
 
-  console.log(errors);
+  const { open, setOpen } =  useGlobalContext();
+
+  const openMenu = () => {
+    setOpen(true);
+  };
 
   return (
     <div>
@@ -45,6 +50,15 @@ const Register = () => {
         <p>{errors?.confirmPassword?.message}</p>
         <button>Register</button>
       </form>
+      <button onClick={openMenu}>open menu</button>
+
+      {open ? (
+        <div>
+          <ul>
+            <li>Home</li>
+          </ul>
+        </div>
+      ) : null}
     </div>
   );
 };

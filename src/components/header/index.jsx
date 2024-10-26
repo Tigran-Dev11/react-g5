@@ -2,8 +2,10 @@ import { NavLink } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
 import s from "./header.module.scss";
 import { IMAGES } from "../../assets/images";
+import { useGlobalContext } from "../../hooks/use-global-context";
 
 const Header = () => {
+  const { open } = useGlobalContext();
   const menus = [
     {
       title: "Home",
@@ -28,13 +30,15 @@ const Header = () => {
       <NavLink>
         <img src={IMAGES.logo} alt="log" className={s.logo} />
       </NavLink>
-      <ul>
-        {menus.map((menu) => (
-          <li key={menu.title}>
-            <NavLink to={menu.path}>{menu.title}</NavLink>
-          </li>
-        ))}
-      </ul>
+      {open ? (
+        <ul>
+          {menus.map((menu) => (
+            <li key={menu.title}>
+              <NavLink to={menu.path}>{menu.title}</NavLink>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </header>
   );
 };

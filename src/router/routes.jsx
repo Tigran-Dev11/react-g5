@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { router } from "./router";
 
-const Router = () => {
+const Router = ({setOpen}) => {
   return (
     <Routes>
       {router.map(({ path, component: Component }) => {
-        return <Route key={path} path={path} element={<Component />} />;
+        return <Route key={path} path={path} element={<Component setOpen={setOpen}/>} />;
       })}
     </Routes>
   );
