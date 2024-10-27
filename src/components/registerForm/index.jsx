@@ -12,7 +12,7 @@ export const RegisterForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(VALIDATION.registerSchema) });
+  } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
 
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
