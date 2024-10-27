@@ -5,7 +5,6 @@ import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
 import {Input} from "../../common/input"
 import * as S from "./styled"
-import "./style.css";
 
 export const LoginForm = () => {
   const navigate = useNavigate();
@@ -37,7 +36,6 @@ export const LoginForm = () => {
           register={register("email")}
           error={errors?.email?.message}
         />
-
         <Input
           type="password"
           placeholder="password"
