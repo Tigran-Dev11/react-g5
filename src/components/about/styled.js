@@ -9,7 +9,15 @@ export const AboutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap:20px;
-  padding:20px 0px 0px 20px;\
+  padding:20px 0 0 20px;
+
+
+   .specific-img{
+
+   }
+
+
+
 `;
 
 export const AboutPageTitle = styled.h1`
@@ -41,4 +49,7 @@ export const AboutPageImage=styled.img`
   width:200px;
   height:200px;
   border-radius:4px;
+
+
+
 `

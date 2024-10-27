@@ -1,7 +1,9 @@
 import "./style.css"
+import * as S from './styled'
+
 export const Loading = () => {
   return (
-    <div className="loading">
+    <S.LoaderWrapper >
       <div className="ball,balls1"></div>
       <div className="zahlaGorc">
         <div className="ballsPlace">
@@ -14,6 +16,6 @@ export const Loading = () => {
         </div>
       </div>
       <div className="ball,balls6"></div>
-    </div>
+    </S.LoaderWrapper>
   );
 };
