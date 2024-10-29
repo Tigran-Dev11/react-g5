@@ -19,7 +19,27 @@ export const ProductCard = ({ product }) => {
       quantity: count,
     };
 
-    // setBasketItems([...basketItems, basketItem])
+    // check if item already exists in basket
+
+    const basketItemExist = basketItems?.find((item) => item.id === product.id);
+
+    if (!basketItemExist) {
+      setBasketItems([...basketItems, basketItem]);
+      return;
+    }
+
+    const updatedBasketItems = basketItems.map((item) => {
+      if (item.id === product.id) {
+        return {
+          ...item,
+          quantity: item.quantity + count,
+        };
+      }
+
+      return item;
+    });
+
+    setBasketItems(updatedBasketItems);
   };
 
   const minus = () => {
