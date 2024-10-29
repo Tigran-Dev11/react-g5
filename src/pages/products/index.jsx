@@ -8,6 +8,7 @@ import Loading from "../loading";
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useDebounce } from "../../hooks/useDebounce";
+import { ProductCard } from "../../components/productCard";
 
 const Products = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -42,36 +43,39 @@ const Products = () => {
       />
 
       <div className={s.productList}>
-        {(filteredData?.length ? filteredData : data)?.map((prod) => {
+        {(filteredData?.length ? filteredData : data)?.map((product) => {
           return (
-            <div className={s.productItem} key={prod.id}>
-              <div>
-                <img src={prod.image} alt="" />
-              </div>
+            // <div className={s.productItem} key={prod.id}>
+            //   <div>
+            //     <img src={prod.image} alt="" />
+            //   </div>
 
-              <div className={s.descr}>
-                <h2>
-                  {prod.title.lenght !== 2
-                    ? prod.title.slice(0, 20)
-                    : prod.title}
-                </h2>
-                <div className={s.price}>
-                  <span>{prod.price}$</span>
-                  <div>
-                    <span>
-                      <FaRegHeart />
-                    </span>
-                    <span>
-                      <MdOutlineShoppingCart />
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <Button
-                click={() => navigate(`${ROUTES.products}/${prod.id}`)}
-                text="More..."
-              />
-            </div>
+            //   <div className={s.descr}>
+            //     <h2>
+            //       {prod.title.lenght !== 2
+            //         ? prod.title.slice(0, 20)
+            //         : prod.title}
+            //     </h2>
+            //     <div className={s.price}>
+            //       <span>{prod.price}$</span>
+            //       <div>
+            //         <span>
+            //           <FaRegHeart />
+            //         </span>
+            //         <span>
+            //           <MdOutlineShoppingCart />
+            //         </span>
+            //       </div>
+            //     </div>
+            //   </div>
+            //   <Button
+            //     click={() => navigate(`${ROUTES.products}/${prod.id}`)}
+            //     text="More..."
+            //   />
+            // </div>
+            <ProductCard product={product} key={product.id}/>
+            
+         
           );
         })}
       </div>
