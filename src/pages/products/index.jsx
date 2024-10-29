@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import { IMAGES } from "../../assets/Images";
-// import {Product} from "../product"
 import { Loading } from "../../components/loading";
 import { MENU } from "../../utils/constant";
+import { ProductCard } from "../../components/product-card";
 import "../products/style.css";
 
 export const Products = () => {
@@ -17,7 +17,7 @@ export const Products = () => {
       try {
         const data = await fetch("https://fakestoreapi.com/products");
         const products = await data.json();
-        
+
         setProducts(products);
       } catch (error) {
       } finally {
@@ -41,7 +41,6 @@ export const Products = () => {
         return (
           <div key={product.id} className="product">
             <img src={product.image} alt={product.name} />
-
             <h2>{product.title}</h2>
             <div className="info">
               <p>{product.price}$</p>
@@ -54,6 +53,13 @@ export const Products = () => {
                   }}
                 >
                   Learn more...
+                </button>
+                <button
+                  onClick={() => {
+                    navigation(`${MENU.ProductCard}/${ProductCard}`);
+                  }}
+                >
+                  <img src={IMAGES.basketIcon} alt="BasketIcon" />
                 </button>
               </div>
             </div>

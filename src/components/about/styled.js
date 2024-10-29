@@ -10,14 +10,6 @@ export const AboutPageContainer = styled.div`
   flex-direction: column;
   gap:20px;
   padding:20px 0 0 20px;
-
-
-   .specific-img{
-
-   }
-
-
-
 `;
 
 export const AboutPageTitle = styled.h1`
@@ -36,7 +28,7 @@ export const AboutPageMenuElement=styled.li`
   font-size:12px;
   font-weight:600;
   color:${COLORS.primary}
-`
+`;
 
 export const AboutPageInfo=styled.p`
   font-size:15px;

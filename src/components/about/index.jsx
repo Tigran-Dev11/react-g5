@@ -20,7 +20,7 @@ export const Info = () => {
         2014-2017 թվականներին որպես ավտոփականագործ 2015 թվականին համատեղությամբ
         սովորել եմ Թումո ստեղծարար տեխնոլոգիաների կենտրոնում։
       </S.AboutPageInfo>
-      <S.AboutPageImage src={IMAGES.myPhoto} alt="MyPhoto"  className="specific-img"/>
+      <S.AboutPageImage src={IMAGES.myPhoto} alt="MyPhoto"/>
     </S.AboutPageContainer>
   
   );

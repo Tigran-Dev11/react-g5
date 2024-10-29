@@ -32,9 +32,9 @@ export const RegisterForm = () => {
           placeholder="first-name"
           {...register("firstName")}
         />
-
+        
         <Input type="text" placeholder="last-name" {...register("lastName")} />
-
+        
         <Input type="email" placeholder="email" {...register("email")} />
 
         <Input

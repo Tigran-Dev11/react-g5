@@ -2,7 +2,8 @@ import * as S from "./styled"
 import { useNavigate } from "react-router-dom";
 import { MENU} from "../../utils/constant";
 import { useState } from "react";
-import { useGlobalContext } from "../../hooks/use-global-context";
+import {IMAGES} from "../../assets/Images"
+// import { useGlobalContext } from "../../hooks/use-global-context";
 
 export const ProductCard = ({ product }) => {
   const navigation = useNavigate();
@@ -33,14 +34,20 @@ export const ProductCard = ({ product }) => {
 
   return (
     <S.ProductCard key={product.id} className="product-item">
-      <img src={product.image} alt="" />
-      <h3>{product.title}</h3>
+      <img src={product.image} alt="ProductPicture" />
       <button
         onClick={() => {
           navigation(`${MENU.PRODUCTS}/${product.id}`);
         }}
       >
         learn more
+      </button>
+      <button
+        onClick={() => {
+          navigation(`${MENU.ProductCard}/${ProductCard}`);
+        }}
+      >
+        <img src={IMAGES.basketIcon} alt="BasketIcon"/>
       </button>
 
       <div className="card-top-part">
@@ -55,3 +62,4 @@ export const ProductCard = ({ product }) => {
     </S.ProductCard>
   );
 };
+

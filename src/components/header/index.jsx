@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <S.HeaderComponent>
       <S.HeaderNavLink href="about">
-        <S.HeaderImage src={IMAGES.favIcon} alt="MyPhoto" />
+        <S.HeaderImage src={IMAGES.logo} alt="MyPhoto" />
       </S.HeaderNavLink>
       <S.HeaderMenu>
         {menuList.map((item, i) => {

@@ -1,6 +1,4 @@
-import { Info } from "../../components/about";
-import "./style.css";
-
+import { Info } from "../../components/about"
 export const About = () => {
   return (
     <div className="container">
