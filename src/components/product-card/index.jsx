@@ -65,13 +65,6 @@ export const ProductCard = ({ product }) => {
       >
         learn more
       </button>
-      <button
-        onClick={() => {
-          navigation(`${MENU.ProductCard}/${ProductCard}`);
-        }}
-      >
-        <img src={IMAGES.basketIcon} alt="BasketIcon"/>
-      </button>
 
       <div className="card-top-part">
         <div>
