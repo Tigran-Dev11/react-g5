@@ -1,7 +1,5 @@
 import { menuList } from "../menuLists";
-// import {MENU} from "../../utils/constant"
 import { IMAGES } from "../../assets/Images";
-// import { NavLink } from "react-router-dom";
 import * as S from "./styled";
 
 const Header = () => {
@@ -21,20 +19,7 @@ const Header = () => {
       </S.HeaderMenu>
     </S.HeaderComponent>
 
-    // <div className="header">
-    //   <NavLink to={MENU.HOME}>
-    //     <img src={logo} alt="logo"/>
-    //   </NavLink>
-    //   <ul>
-    //     {menuList.map((item, i) => {
-    //       return (
-    //         <li key={`${item.name}-${i}`}>
-    //           <NavLink to={item.href}>{item.name}</NavLink>
-    //         </li>
-    //       );
-    //     })}
-    //   </ul>
-    // </div>
+    
   );
 };
 

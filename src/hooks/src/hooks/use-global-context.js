@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { GlobalContext } from "../providers/global-provider";
 
 const useGlobalContext = () => {

@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { MENU} from "../../utils/constant";
 import { useState } from "react";
 import {IMAGES} from "../../assets/Images"
-// import { useGlobalContext } from "../../hooks/use-global-context";
+import { useGlobalContext } from "../../hooks/use-global-context";
 
 export const ProductCard = ({ product }) => {
   const navigation = useNavigate();
   const [count, setCount] = useState(1);
-  // const { basketItems, setBasketItems } = useGlobalContext();
+  const { basketItems, setBasketItems } = useGlobalContext();
 
  
   const addBasket = () => {
@@ -20,6 +20,29 @@ export const ProductCard = ({ product }) => {
       quantity: count,
     };
 
+  
+
+
+  const basketItemExist = basketItems?.find((item) => item.id === product.id);
+
+    if (!basketItemExist) {
+      setBasketItems([...basketItems, basketItem]);
+      return;
+    }
+
+    const updatedBasketItems = basketItems.map((item) => {
+      if (item.id === product.id) {
+        return {
+          ...item,
+          quantity: item.quantity + count,
+        };
+      }else{
+        return item;
+      }
+
+    });
+
+    setBasketItems(updatedBasketItems);
   };
 
   const minus = () => {
