@@ -12,7 +12,8 @@ export const ROUTES = {
     products: "/products",
     product: "/products/:prodId",
     register: "/register",
-    login: "/login"
+    login: "/login",
+    basket: "/basket"
 };
 
 export const menuLinks = [

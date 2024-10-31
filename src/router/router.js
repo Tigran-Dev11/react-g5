@@ -7,6 +7,8 @@ import NotFound from "../pages/notFound";
 import Product from "../pages/product";
 import Register from "../pages/register";
 import Login from "../pages/login";
+import Basket from "../pages/basket";
+
 
 export const router = [
     {
@@ -40,5 +42,9 @@ export const router = [
     {
         path:ROUTES.login,
         component:Login,
+    },
+    {
+        path:ROUTES.basket,
+        component:Basket,
     },
 ]

@@ -10,7 +10,7 @@ import { ROUTES } from "../../utils/constant";
 
 const Register = () => {
   const navigate = useNavigate();
-   const { setItem } = useLocalStorage("data")
+  const { setItem } = useLocalStorage("data")
 
 
 

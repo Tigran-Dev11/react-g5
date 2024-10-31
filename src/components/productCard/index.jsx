@@ -6,43 +6,64 @@ import { useNavigate } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Button from "../../common/button";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 
 export const ProductCard = ({ product }) => {
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
-    const { basketItems, setBasketItems } = useGlobalContext();
-
+    const [price, setPrice] = useState(product.price)
+    const { basketItems, setBasketItems, } = useGlobalContext();
+    const { setItem } = useLocalStorage("basketItems")
 
     const addBasket = () => {
+    
         const basketItem = {
-            id:product.id,
-            title:product.title,
-            price:product.price,
-            quantity: count,
+          id: product.id,
+          img:product.image,
+          title: product.title,
+          price: product.price,
+          quantity: count,
+        };
+    
+        const basketItemExist = basketItems?.find((item) => item.id === product.id);
+    
+        if (!basketItemExist) {
+          setBasketItems([...basketItems, basketItem]);
+          return;
         }
-   
-    //    basketItems.map(el => el.id === basketItem.id && el.quantity++)
-        // basketItems.find((el) =>{
-        // return el.id === basketItem.id && el.quantity++ 
-        //  })
-         
     
-        setBasketItems([...basketItems, basketItem])
+        const updatedBasketItems = basketItems.map((item) => {
+          if (item.id === product.id) {
+            return {
+              ...item,
+              quantity: item.quantity + count,
+            };
+          }
     
-        // console.log(basketItems);
-    };
+          return item;
+        });
+    
+        setBasketItems(updatedBasketItems);
+        if(basketItems.lenght !== 0){
+          setItem(basketItems)
+        }
+      
+      };
 
     const addFavourite = () => {
-        console.log("Hello");
+        // console.log("Hello");
     };
 
     const increment = () => {
-        setCount(count + 1)
+        setCount(count + 1);
+        setPrice(price => price + product.price)
     };
 
     const decrement = () => {
-       if(count >= 2) setCount(count - 1)    
+       if(count >= 2) setCount(count - 1);
+       if(price > product.price) setPrice(price => +(price - product.price).toFixed(2)) 
+          
     };
 
 
@@ -60,7 +81,7 @@ export const ProductCard = ({ product }) => {
                     : product.title}
                 </h2>
                 <div className={s.price}>
-                  <span>{product.price}$</span>
+                  <span>{price}$</span>
                   <div>
                     <Button text={<FaRegHeart />} click={ addFavourite}/>
 
@@ -71,9 +92,9 @@ export const ProductCard = ({ product }) => {
               </div>
              
               <div>
-               <Button className="increment" text="+" click={increment}/>
+               <Button className={s.increment} text="+" click={increment}/>
                 <span>{count}</span>
-                <Button className="decrement" text="-" click={decrement}/>
+                <Button className={s.decrement} text="-" click={decrement}/>
                
               </div>
               
