@@ -1,4 +1,4 @@
-import * as S from "./styled"
+import * as S from "./styled";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +16,7 @@ export const RegisterForm = () => {
 
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
+    console.log(data);
     navigate("/login");
   };
 
@@ -32,9 +33,9 @@ export const RegisterForm = () => {
           placeholder="first-name"
           {...register("firstName")}
         />
-        
+
         <Input type="text" placeholder="last-name" {...register("lastName")} />
-        
+
         <Input type="email" placeholder="email" {...register("email")} />
 
         <Input

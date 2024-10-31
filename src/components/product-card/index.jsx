@@ -1,29 +1,24 @@
-import * as S from "./styled"
+import * as S from "./styled";
 import { useNavigate } from "react-router-dom";
-import { MENU} from "../../utils/constant";
+import { MENU } from "../../utils/constant";
 import { useState } from "react";
-import {IMAGES} from "../../assets/Images"
-import { useGlobalContext } from "../../hooks/use-global-context";
+import { useGlobalContext } from "../../hooks/src/hooks/use-global-context"
 
 export const ProductCard = ({ product }) => {
   const navigation = useNavigate();
   const [count, setCount] = useState(1);
   const { basketItems, setBasketItems } = useGlobalContext();
 
- 
   const addBasket = () => {
-
     const basketItem = {
       id: product.id,
+      image: product.img,
       title: product.title,
       price: product.price,
       quantity: count,
     };
 
-  
-
-
-  const basketItemExist = basketItems?.find((item) => item.id === product.id);
+    const basketItemExist = basketItems?.find((item) => item.id === product.id);
 
     if (!basketItemExist) {
       setBasketItems([...basketItems, basketItem]);
@@ -36,10 +31,9 @@ export const ProductCard = ({ product }) => {
           ...item,
           quantity: item.quantity + count,
         };
-      }else{
+      } else {
         return item;
       }
-
     });
 
     setBasketItems(updatedBasketItems);
@@ -78,4 +72,3 @@ export const ProductCard = ({ product }) => {
     </S.ProductCard>
   );
 };
-
