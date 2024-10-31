@@ -29,7 +29,9 @@ export const ProductCard = ({ product }) => {
         const basketItemExist = basketItems?.find((item) => item.id === product.id);
     
         if (!basketItemExist) {
-          setBasketItems([...basketItems, basketItem]);
+          const updateBasketItems = [...basketItems, basketItem]
+          setBasketItems(updateBasketItems);          
+          setItem(updateBasketItems)
           return;
         }
     
@@ -45,10 +47,7 @@ export const ProductCard = ({ product }) => {
         });
     
         setBasketItems(updatedBasketItems);
-        if(basketItems.lenght !== 0){
-          setItem(basketItems)
-        }
-      
+        setItem(updatedBasketItems)
       };
 
     const addFavourite = () => {
@@ -61,9 +60,11 @@ export const ProductCard = ({ product }) => {
     };
 
     const decrement = () => {
-       if(count >= 2) setCount(count - 1);
-       if(price > product.price) setPrice(price => +(price - product.price).toFixed(2)) 
-          
+       if(count >= 2) {
+        setCount(count - 1);
+        setPrice(price => +(price - product.price)) 
+       }
+    
     };
 
 
@@ -81,7 +82,7 @@ export const ProductCard = ({ product }) => {
                     : product.title}
                 </h2>
                 <div className={s.price}>
-                  <span>{price}$</span>
+                  <span>{price?.toFixed(2)}$</span>
                   <div>
                     <Button text={<FaRegHeart />} click={ addFavourite}/>
 
