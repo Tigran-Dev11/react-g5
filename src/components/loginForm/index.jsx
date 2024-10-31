@@ -10,19 +10,15 @@ export const LoginForm = () => {
   const navigate = useNavigate();
   const {
     register,
-    handleSubmit,    formState: { errors },
+    handleSubmit,
+    setValue,
+    setError,
+    reset,
+    formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
-  const onSubmit = (body) => {
-    let data = localStorage.getItem("data");
-
-    if (data) {
-      let response = JSON.parse(data);
-
-      if (body.email === response.email && body.password === response.password) {
-        navigate("/home");
-      }
-    }
+  const onSubmit = (data) => {
+    reset()
   };
 
   return (

@@ -1,4 +1,4 @@
-import * as S from "./styled";
+import * as S from "./styled"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
@@ -14,9 +14,11 @@ export const RegisterForm = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
 
+
+
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
-    console.log(data);
+    console.log(data);  
     navigate("/login");
   };
 
@@ -33,22 +35,27 @@ export const RegisterForm = () => {
           placeholder="first-name"
           {...register("firstName")}
         />
+        <p>{errors?.firstName?.message}</p>
 
         <Input type="text" placeholder="last-name" {...register("lastName")} />
+        <p>{errors?.lastName?.message}</p>
 
         <Input type="email" placeholder="email" {...register("email")} />
+        <p>{errors?.email?.message}</p>
 
         <Input
           type="password"
           placeholder="password"
           {...register("password")}
         />
+        <p>{errors?.password?.message}</p>
 
         <Input
           type="password"
           placeholder="password"
           {...register("confirmPassword")}
         />
+        <p>{errors?.confirmPasswordpassword?.message}</p>
 
         <Button text="Registration" />
       </S.RegisterForm>
