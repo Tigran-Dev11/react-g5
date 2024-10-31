@@ -1,4 +1,4 @@
-import * as S from "./styled"
+import * as S from "./styled";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
@@ -14,48 +14,45 @@ export const RegisterForm = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
 
-
-
   const onSubmit = (data) => {
     localStorage.setItem("data", JSON.stringify(data));
-    console.log(data);  
+    console.log(data);
     navigate("/login");
   };
 
   console.log(errors);
   return (
     <S.RegisterComponent>
-      <S.RegisterForm
-        className="registerForm"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <S.RegisterTitle>RegisterPage</S.RegisterTitle>
+      <S.RegisterForm className="registerForm" onSubmit={handleSubmit(onSubmit)}>
         <Input
           type="text"
           placeholder="first-name"
-          {...register("firstName")}
+          register={register("firstName")}
+          error={errors?.firstName?.message}
         />
-        <p>{errors?.firstName?.message}</p>
-
-        <Input type="text" placeholder="last-name" {...register("lastName")} />
-        <p>{errors?.lastName?.message}</p>
-
-        <Input type="email" placeholder="email" {...register("email")} />
-        <p>{errors?.email?.message}</p>
-
         <Input
-          type="password"
-          placeholder="password"
-          {...register("password")}
+          type="text"
+          placeholder="first-name"
+          register={register("lastName")}
+          errors={errors?.lastName?.message}
         />
-        <p>{errors?.password?.message}</p>
-
         <Input
-          type="password"
-          placeholder="password"
-          {...register("confirmPassword")}
+          type="text"
+          placeholder="first-name"
+          register={register("email")}
+          errors={errors?.email?.message}
         />
-        <p>{errors?.confirmPasswordpassword?.message}</p>
+        <Input
+          type="text"
+          placeholder="first-name"
+          register={register("password")}
+        />
+        <Input
+          type="text"
+          placeholder="first-name"
+          register={register("confirmPassword")}
+        />
+     
 
         <Button text="Registration" />
       </S.RegisterForm>

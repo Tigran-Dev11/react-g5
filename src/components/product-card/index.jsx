@@ -2,7 +2,7 @@ import * as S from "./styled";
 import { useNavigate } from "react-router-dom";
 import { MENU } from "../../utils/constant";
 import { useState } from "react";
-import { useGlobalContext } from "../../hooks/src/hooks/use-global-context"
+import { useGlobalContext } from "../../hooks/use-global-context";
 
 export const ProductCard = ({ product }) => {
   const navigation = useNavigate();

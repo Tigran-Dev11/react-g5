@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalProvider } from "./providers/global-provider";
+import { ProductProvider } from "./providers/product-provider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
-      <GlobalProvider>
+  <BrowserRouter>
+    <GlobalProvider>
+      <ProductProvider>
         <App />
-      </GlobalProvider>
-    </BrowserRouter>
+      </ProductProvider>
+    </GlobalProvider>
+  </BrowserRouter>
 );

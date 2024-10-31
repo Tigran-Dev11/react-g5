@@ -3,6 +3,9 @@ import { COLORS } from "../../assets/styles/colors";
 
 export const CommonInput = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 `;
 export const Input = styled.input`
     width:50%;

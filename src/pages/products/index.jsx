@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import {  useNavigate } from "react-router-dom";
-import { IMAGES } from "../../assets/Images";
+import { useNavigate } from "react-router-dom";
 import { Loading } from "../../components/loading";
-import { MENU } from "../../utils/constant";
 import { ProductCard } from "../../components/product-card";
 import "../products/style.css";
 
@@ -38,33 +36,7 @@ export const Products = () => {
           product.title = product.title.substring(0, 20) + "...";
         }
 
-        return (
-          <div key={product.id} className="product">
-            <img src={product.image} alt={product.name} />
-            <h2>{product.title}</h2>
-            <div className="info">
-              <p>{product.price}$</p>
-              <div className="rate">
-                <p>{product.rating.rate}</p>
-                <img src={IMAGES.favIcon} alt="FavIcon" />
-                <button
-                  onClick={() => {
-                    navigation(`${MENU.PRODUCTS}/${product.id}`);
-                  }}
-                >
-                  Learn more...
-                </button>
-                <button
-                  onClick={() => {
-                    navigation(`${MENU.ProductCard}/${ProductCard}`);
-                  }}
-                >
-                  <img src={IMAGES.basketIcon} alt="BasketIcon" />
-                </button>
-              </div>
-            </div>
-          </div>
-        );
+        return <ProductCard product={product} />;
       })}
     </div>
   );
