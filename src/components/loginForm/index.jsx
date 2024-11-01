@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
+import {MENU} from "../../utils/constant";
 import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
 import {Input} from "../../common/input"
@@ -18,7 +19,8 @@ export const LoginForm = () => {
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
   const onSubmit = (data) => {
-    reset()
+    
+    navigate("/");
   };
 
   return (
