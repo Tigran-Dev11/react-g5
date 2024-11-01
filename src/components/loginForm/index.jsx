@@ -5,6 +5,7 @@ import {MENU} from "../../utils/constant";
 import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
 import {Input} from "../../common/input"
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import * as S from "./styled"
 
 export const LoginForm = () => {
@@ -18,9 +19,14 @@ export const LoginForm = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
+  const {getItem,removeItem} =useLocalStorage("data")  
+
   const onSubmit = (data) => {
-    
-    navigate("/");
+    regData    
+    if (data?.email === regData?.email && data?.password === regData?.password) {
+      navigate(MENU.HOME);
+      removeItem(data)  
+    }
   };
 
   return (
