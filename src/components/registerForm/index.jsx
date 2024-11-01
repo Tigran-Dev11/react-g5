@@ -1,29 +1,35 @@
 import * as S from "./styled";
+import { MENU } from "../../utils/constant";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import Button from "../../common/button";
 import { Input } from "../../common/input";
 import { VALIDATION } from "../../utils/validationSchema";
-
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 export const RegisterForm = () => {
   const navigate = useNavigate();
+  const { setItem } = useLocalStorage("data");
+
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
 
   const onSubmit = (data) => {
-    localStorage.setItem("data", JSON.stringify(data));
-    console.log(data);
-    navigate("/login");
+    setItem(data);
+    navigate(MENU.LOGIN);
+    reset();
   };
 
-  console.log(errors);
   return (
     <S.RegisterComponent>
-      <S.RegisterForm className="registerForm" onSubmit={handleSubmit(onSubmit)}>
+      <S.RegisterForm
+        className="registerForm"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Input
           type="text"
           placeholder="first-name"
@@ -52,7 +58,6 @@ export const RegisterForm = () => {
           placeholder="first-name"
           register={register("confirmPassword")}
         />
-     
 
         <Button text="Registration" />
       </S.RegisterForm>

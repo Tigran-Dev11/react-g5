@@ -22,7 +22,7 @@ export const LoginForm = () => {
   const {getItem,removeItem} =useLocalStorage("data")  
 
   const onSubmit = (data) => {
-    regData    
+    regData()    
     if (data?.email === regData?.email && data?.password === regData?.password) {
       navigate(MENU.HOME);
       removeItem(data)  
