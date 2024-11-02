@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Loading } from "../../components/loading";
 import { ProductCard } from "../../components/product-card";
 import "../products/style.css";
@@ -8,7 +8,7 @@ export const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const navigation = useNavigate();
+  // const navigation = useNavigate();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -32,7 +32,7 @@ export const Products = () => {
   return (
     <div className="products">
       {products.map((product) => {
-        if (product.title.length >= 20) {
+        if (product.title.length >= 30) {
           product.title = product.title.substring(0, 20) + "...";
         }
 

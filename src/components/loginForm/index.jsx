@@ -1,31 +1,34 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
-import {MENU} from "../../utils/constant";
+import { MENU } from "../../utils/constant";
 import Button from "../../common/button";
 import { VALIDATION } from "../../utils/validationSchema";
-import {Input} from "../../common/input"
+import { Input } from "../../common/input";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
-import * as S from "./styled"
+import * as S from "./styled";
 
 export const LoginForm = () => {
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    setValue,
-    setError,
-    reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
-  const {getItem,removeItem} =useLocalStorage("data")  
+  const { getItem, removeItem } = useLocalStorage("data");
 
   const onSubmit = (data) => {
-    regData()    
-    if (data?.email === regData?.email && data?.password === regData?.password) {
+    const regData = getItem(data);
+    if (
+      data?.email === regData?.email &&
+      data?.password === regData?.password
+    ) {
       navigate(MENU.HOME);
-      removeItem(data)  
+      removeItem(data);
+    }else{
+      alert (`Please check the entered data again
+`)
     }
   };
 

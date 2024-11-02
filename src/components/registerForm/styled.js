@@ -13,9 +13,9 @@ export const RegisterForm = styled.form`
   background-color:${COLORS.gray};
   width: 40%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
-  padding:20px 0px 0px 20px;
+  padding:20px 0 0 0;
   border-radius:4px;
   margin:20px 0px 0px 20px;
 `;
