@@ -5,11 +5,11 @@ import BasketPageItem from "../../components/basket";
 import { useGlobalContext } from "../../hooks/use-global-context";
 
 export const Basket = () => {
-  const { basketItems } = useGlobalContext();
+  const { basketPageItem } = useGlobalContext();
 
   return (
     <S.BasketComponent>
-      {basketItems?.map((item) => {
+      {basketPageItem?.map((item) => {
         <BasketPageItem key={item.id} item={item} />;
       })}
     </S.BasketComponent>

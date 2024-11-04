@@ -5,8 +5,7 @@ import {Register} from "../pages/register";
 import {About} from "../pages/about";
 import {Products} from "../pages/products";
 import {Product} from "../pages/product";
-import BasketPageItem from "../components/basket";
-
+import { Basket } from "../pages/basket";
 export const router = [
   {
     path: "/",
@@ -39,6 +38,6 @@ export const router = [
   },
   {
     path: MENU.BASKET,
-    component: BasketPageItem,
+    component: Basket,
   },
 ];

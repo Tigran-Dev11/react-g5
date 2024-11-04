@@ -10,13 +10,13 @@ const BasketPageItem = ({ item }) => {
 
   const increase = () => {
     setCount(count + 1);
-    setPrice((price) => price + item.price);
+    setPrice((price) => (price + item.price));
   };
 
   const decrease = () => {
     if (count >= 2) {
       setCount(count - 1);
-      setPrice((price) => price - item.price);
+      setPrice((price) => (price - item.price));
     }
   };
 
