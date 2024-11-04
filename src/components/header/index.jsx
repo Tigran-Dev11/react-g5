@@ -30,7 +30,7 @@ const Header = () => {
       <NavLink>
         <img src={IMAGES.logo} alt="log" className={s.logo} />
       </NavLink>
-      {open ? (
+      { 
         <ul>
           {menus.map((menu) => (
             <li key={menu.title}>
@@ -38,7 +38,7 @@ const Header = () => {
             </li>
           ))}
         </ul>
-      ) : null}
+      }
     </header>
   );
 };

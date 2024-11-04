@@ -1,26 +1,32 @@
-import { useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../utils/constant";
 import { useFetch } from "../../hooks/use-fetch";
 import { ProductCard } from "../../components/product-card";
 import { useGlobalContext } from "../../hooks/use-global-context";
+import { useDispatch, useSelector } from "react-redux";
+import { productSelector } from "../../libs/redux/product-slice/selectors";
+import { productActions } from "../../libs/redux/product-slice";
 
 const Products = () => {
-  const [number, setNumber] = useState(0);
   const navigation = useNavigate();
+  const dispatch = useDispatch();
+
+  const { productCount, status } = useSelector(productSelector);
+
 
   const { basketItems } = useGlobalContext();
-
-  console.log(basketItems);
 
   const { data, loading } = useFetch({
     url: "https://fakestoreapi.com/products",
   });
 
   const increment = () => {
-    setNumber(number + 1);
+    dispatch(productActions.incrementProductCount(10));
   };
+
+  const changeStatus = ()=>{
+    dispatch(productActions.changeStatusToSuccess())
+  }
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -28,8 +34,15 @@ const Products = () => {
 
   return (
     <div>
-      <h1>{number}</h1>
-      <button onClick={increment}>increment</button>
+      <h1>{productCount}</h1>
+      <button onClick={increment}>increment product count</button>
+
+
+      <br />
+      <h1>{status}</h1>
+      <br />
+      <button onClick={changeStatus}>change Status</button>
+
 
       <div className="product-list">
         {data?.map((product) => {
