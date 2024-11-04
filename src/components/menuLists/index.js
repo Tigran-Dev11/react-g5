@@ -29,5 +29,10 @@ export const menuList = [
     name:"Products",
     href:MENU.PRODUCTS,
   },
+  {
+    id:6,
+    name:"Basket",
+    href:MENU.BASKET,
+  }
   
 ];
