@@ -5,5 +5,6 @@ export const MENU = {
   REGISTRATION: "/register",
   PRODUCTS: "/products",
   PRODUCT: "/products/:prodId",
-  ProductCard:"/card"
+  ProductCard:"/card",
+  BASKET:"/basket",
 };

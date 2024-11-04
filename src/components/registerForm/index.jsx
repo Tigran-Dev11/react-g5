@@ -7,6 +7,7 @@ import Button from "../../common/button";
 import { Input } from "../../common/input";
 import { VALIDATION } from "../../utils/validationSchema";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+
 export const RegisterForm = () => {
   const navigate = useNavigate();
   const { setItem } = useLocalStorage("data");
@@ -38,24 +39,24 @@ export const RegisterForm = () => {
         />
         <Input
           type="text"
-          placeholder="first-name"
+          placeholder="last-name"
           register={register("lastName")}
           errors={errors?.lastName?.message}
         />
         <Input
           type="text"
-          placeholder="first-name"
+          placeholder="email"
           register={register("email")}
           errors={errors?.email?.message}
         />
         <Input
-          type="text"
-          placeholder="first-name"
+          type="password"
+          placeholder="password"
           register={register("password")}
         />
         <Input
-          type="text"
-          placeholder="first-name"
+          type="password"
+          placeholder="confirm-password"
           register={register("confirmPassword")}
         />
 

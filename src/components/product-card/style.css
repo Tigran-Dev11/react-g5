@@ -41,10 +41,13 @@
 }
 
 .quentitySelector{
-    margin-left:10px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
 }
 
 .basket{
     width: 20px;
     height: 20px;
 }
+

@@ -15,7 +15,7 @@ export const RegisterForm = styled.form`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  padding:20px 0 0 0;
+  padding:20px 0 0 20px;
   border-radius:4px;
   margin:20px 0px 0px 20px;
 `;

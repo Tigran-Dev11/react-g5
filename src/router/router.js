@@ -1,12 +1,11 @@
 import { MENU } from "../utils/constant";
-import { About } from "../pages/about";
-import { Home } from "../pages/home";
-import { Login } from "../pages/login";
-import { Register } from "../pages/register";
-import { Products } from "../pages/products";
-import { Product } from "../pages/product";
-import { ProductCard } from "../components/product-card";
-
+import {Home} from "../pages/home";
+import {Login} from "../pages/login";
+import {Register} from "../pages/register";
+import {About} from "../pages/about";
+import {Products} from "../pages/products";
+import {Product} from "../pages/product";
+import BasketPageItem from "../components/basket";
 
 export const router = [
   {
@@ -39,7 +38,7 @@ export const router = [
     component: Product,
   },
   {
-    path: MENU.ProductCard,
-    component: ProductCard,
+    path: MENU.BASKET,
+    component: BasketPageItem,
   },
 ];
