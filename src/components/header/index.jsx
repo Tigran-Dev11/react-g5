@@ -1,11 +1,12 @@
 import { menuList } from "../menuLists";
 import { IMAGES } from "../../assets/Images";
 import * as S from "./styled";
+import { MENU } from "../../utils/constant";
 
 const Header = () => {
   return (
     <S.HeaderComponent>
-      <S.HeaderNavLink href="about">
+      <S.HeaderNavLink href={MENU.HOME}>
         <S.HeaderImage src={IMAGES.logo} alt="MyPhoto" />
       </S.HeaderNavLink>
       <S.HeaderMenu>
