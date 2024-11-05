@@ -8,13 +8,13 @@ const BasketPageItem = ({ item }) => {
   
   const increase = () => {
     setCount(count + 1);
-    setPrice(price => (price + item.price))
+    setPrice((price) => (price + item.price))
   };
 
   const decrease = () => {
     if (count >= 2) {
       setCount(count - 1);
-      setPrice(price => (price - item.price))
+      setPrice((price) => (price - item.price))
     }
   }
 
@@ -24,7 +24,7 @@ const BasketPageItem = ({ item }) => {
         <S.Image src={item.img} alt={item.title} />
       </S.ImagePlace>
       <span>
-        {item.title.length > 15 ? item.title.slice(0, 11) : item.title}
+        {item.title.length > 15 ? item.title.slice(0, 20) : item.title}
       </span>
       <span>
         Price:<span>{price.toFixed(2)}</span>

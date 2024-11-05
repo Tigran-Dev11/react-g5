@@ -40,13 +40,13 @@ export const ProductCard = ({ product }) => {
     setBasketItems(updatedBasketItems);
   };
 
-  const minus = () => {
+  const decrease = () => {
     if (count >= 2) {
       setCount(count - 1);
     }
   };
 
-  const plus = () => {
+  const increase = () => {
     setCount(count + 1);
   };
 
@@ -66,9 +66,9 @@ export const ProductCard = ({ product }) => {
       <div className="card-top-part">
         <div className="quentitySelector">
           <div>
-            <button onClick={minus}>-</button>
+            <button onClick={decrease}>-</button>
             <span>{count}</span>
-            <button onClick={plus}>+</button>
+            <button onClick={increase}>+</button>
             <span>${product.price}</span>
           </div>
           <button className="basketIcon" onClick={addBasket}>

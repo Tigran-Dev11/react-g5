@@ -4,7 +4,7 @@ import {createContext, useState } from "react";
 const GlobalContext = createContext({});
 
 const GlobalProvider = ({ children }) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [count,setCount] =useState(1)
   const [basketItems, setBasketItems] = useState([]);
 
