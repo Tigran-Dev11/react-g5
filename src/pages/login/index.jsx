@@ -1,5 +1,4 @@
 import { LoginForm } from "../../components/loginForm";
-import "./style.css";
 
 export const Login = () => {
   return (

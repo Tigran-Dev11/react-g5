@@ -1,11 +1,8 @@
 import { MENU } from "../utils/constant";
-import { About } from "../pages/about";
+import { About } from "../pages/contact";
 import { Home } from "../pages/home";
 import { Login } from "../pages/login";
 import { Register } from "../pages/register";
-import { Products } from "../pages/products";
-import { Product } from "../pages/product";
-import { ProductCard } from "../components/product-card";
 
 export const router = [
   {
@@ -28,17 +25,4 @@ export const router = [
     component: About,
   },
 
-  {
-    path: MENU.PRODUCTS,
-    component: Products,
-  },
-
-  {
-    path: MENU.PRODUCT,
-    component: Product,
-  },
-  {
-    path: MENU.ProductCard,
-    component: ProductCard,
-  },
 ];

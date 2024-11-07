@@ -1,5 +1,5 @@
-import { menuList } from "../menuLists";
-import { IMAGES } from "../../assets/Images";
+import { menuList } from "../menuList";
+import { IMAGES } from "../../assets/images";
 import * as S from "./styled";
 
 const Header = () => {
