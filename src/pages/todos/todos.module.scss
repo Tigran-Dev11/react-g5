@@ -1,0 +1,57 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .inpWrapper{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            width: 100%;
+            padding: 5px;
+        }
+        button{
+            padding: 5px;
+            cursor: pointer;
+        }
+        
+    }
+    .select{
+        min-width: 70px;
+         select{
+             width: 100%;
+             height: 30px;
+             font-size: 14px;
+             cursor: pointer;
+         }
+     }
+    ul{
+        li{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            font-size: 20px;
+            text-transform: capitalize;
+            .buttons{
+                display: flex;
+                gap: 5px;
+                cursor: pointer;
+                .check{
+                    color: black;
+                }
+             .checked{
+                svg{
+                    color: green;
+                }
+               
+             }
+            
+            }
+        }
+    }
+}
