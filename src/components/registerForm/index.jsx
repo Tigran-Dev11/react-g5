@@ -30,6 +30,8 @@ export const RegisterForm = () => {
         className="registerForm"
         onSubmit={handleSubmit(onSubmit)}
       >
+        <S.RegisterTitle>Register-Page</S.RegisterTitle>
+
         <Input
           type="text"
           placeholder="first-name"

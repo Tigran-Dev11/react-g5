@@ -15,9 +15,9 @@ export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 20px 0px 0px 20px;
+  padding: 20px 0 20px 20px;
   border-radius: 4px;
-  margin: 20px 0px 0px 20px;
+  margin: 20px 0 0 20px;
 `;
 
 export const LoginTitle = styled.h1`

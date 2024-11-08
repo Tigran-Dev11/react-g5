@@ -1,5 +1,7 @@
-import * as S from "./styled";
-const Button = ({ click, text }) => {
-  return <S.Button onClick={click}>{text}</S.Button>;
-};
-export default Button;
+import styled from "styled-components";
+
+export const Button =styled.button`
+    width:25%;
+    border-radius:1px;
+    border:none;
+`;

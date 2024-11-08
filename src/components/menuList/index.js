@@ -24,6 +24,12 @@ export const menuList = [
     name: "Register",
     href: MENU.REGISTRATION,
   },
+  {
+    id:5,
+    name:"Count",
+    href:MENU.COUNT,
+
+  }
 
   
 ];
