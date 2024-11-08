@@ -18,9 +18,7 @@ const productSlice = createSlice({
       state.productCount = state.productCount - payload;
     },
 
-    changeStatusToSuccess: (state) => {
-      state.status = "";
-    },
+    
   },
 });
 

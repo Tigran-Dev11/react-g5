@@ -3,7 +3,6 @@ import { productSelector } from "../../libs/redux/product-slice/selectors";
 import { productActions } from "../../libs/redux/product-slice";
 
 export const Counter = () => {
-  
   const dispatch = useDispatch();
   const { productCount } = useSelector(productSelector);
 
