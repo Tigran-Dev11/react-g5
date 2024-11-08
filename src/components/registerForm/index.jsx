@@ -1,13 +1,15 @@
 import * as S from "./styled";
-import { MENU } from "../../utils/constant";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { MENU } from "../../utils/constant";
 import { useNavigate } from "react-router-dom";
 import Button from "../../common/button";
 import { Input } from "../../common/input";
 import { VALIDATION } from "../../utils/validationSchema";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 export const RegisterForm = () => {
+  const { setItem } = useLocalStorage("data");
   const navigate = useNavigate();
   const {
     register,
@@ -16,9 +18,9 @@ export const RegisterForm = () => {
   } = useForm({ resolver: yupResolver(VALIDATION.registerValidation) });
 
   const onSubmit = (data) => {
-    localStorage.setItem("data", JSON.stringify(data));
+    setItem(data);
     console.log(data);
-    navigate("/login");
+    navigate(MENU.LOGIN);
   };
 
   console.log(errors);

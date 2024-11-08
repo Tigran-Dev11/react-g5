@@ -1,5 +1,6 @@
-import logo from "../../assets/images/logo.jpg";
+import logo from "./logo.jpg";
+import myPhoto from "./myphoto.jpg"
 
 export const IMAGES = {
-  logo,
+  logo,myPhoto
 };

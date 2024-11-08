@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { COLORS } from "../../assets/styles/colors";
 // import { BREAKPOINTS } from "../../assets/styles/breakpoints";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const AboutPageContainer = styled.div`
   width: 100%;
@@ -22,6 +22,7 @@ export const AboutPageMenu = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 5px;
+  align-items:flex-start;
 `;
 
 export const AboutPageMenuElement = styled.li`

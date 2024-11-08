@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import { MENU } from "../../utils/constant";
 import Button from "../../common/button";
+import {useLocalStorage} from "../../hooks/useLocalStorage"
 import { VALIDATION } from "../../utils/validationSchema";
 import { Input } from "../../common/input";
 import * as S from "./styled";
@@ -12,15 +13,23 @@ export const LoginForm = () => {
   const {
     register,
     handleSubmit,
-    setValue,
-    setError,
-    reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(VALIDATION.loginValidation) });
 
+  const { getItem, removeItem } = useLocalStorage("data");
+
   const onSubmit = (data) => {
-    navigate("/");
-    reset()
+     const regData = getItem(data);
+     if (
+       data?.email === regData?.email &&
+       data?.password === regData?.password
+     ) {
+       navigate(MENU.HOME);
+       removeItem(data);
+     } else {
+       alert(`Please check the entered data again
+`);
+     }
   };
 
   return (

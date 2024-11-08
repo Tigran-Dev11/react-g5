@@ -1,8 +1,8 @@
 import { MENU } from "../utils/constant";
 import { About } from "../pages/contact";
 import { Home } from "../pages/home";
-import { Login } from "../pages/login";
-import { Register } from "../pages/register";
+import {Login} from "../pages/login";
+import {Register} from "../pages/register";
 
 export const router = [
   {
