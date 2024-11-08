@@ -20,6 +20,7 @@ const todoSlice = createSlice({
     deleteTodo: (state, { payload }) => {
       state.todoList =  state.todoList.filter((el) => el.id !== payload);
     },
+    
     checkedTodo: (state, { payload }) => {
       state.todoList = state.todoList.map((el) => {
         if (el.id === payload) el.completed = !el.completed

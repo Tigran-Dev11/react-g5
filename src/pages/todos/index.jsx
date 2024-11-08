@@ -5,8 +5,7 @@ import { todoActions } from "../../libs/redux/todo-slice";
 import { useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaCheck } from "react-icons/fa";
-import { v4 as uuidv4 } from "uuid";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const TodoList = () => {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ const TodoList = () => {
   };
 
   const todo = {
-    id: uuidv4(),
+    id: uuidv4,
     task: inputValue,
     completed: false,
   };
@@ -49,13 +48,13 @@ const TodoList = () => {
       <div className={s.inpWrapper}>
         <input type="text" onChange={onChange} value={inputValue} />
         <button onClick={addTodo}>Add</button>
-        <div className={s.select}>
+          <div className={s.select}>
                     <select onChange={handelSelect}>
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
                         <option value="uncompleted">Uncompleted</option>
                     </select>
-               </div>
+            </div>
         </div>
         {
           <ul>
