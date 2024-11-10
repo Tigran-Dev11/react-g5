@@ -7,5 +7,6 @@ export const COLORS = {
   info: "#0af",
   white: "#FFFFFF",
   gray: "#d8cece",
-  black: "#000000",
+  black: "#020100",
+  boxColor: "#1c140f",
 };

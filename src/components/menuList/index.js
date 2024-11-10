@@ -25,11 +25,19 @@ export const menuList = [
     href: MENU.REGISTRATION,
   },
   {
-    id:5,
-    name:"Count",
-    href:MENU.COUNT,
+    id: 5,
+    name: "Count",
+    href: MENU.COUNT,
+  },
 
-  }
-
-  
+  {
+    id: 6,
+    name: "Portfolio",
+    href: MENU.PORTFOLIO,
+  },
+  {
+    id: 7,
+    name: "News",
+    href: MENU.NEWS,
+  },
 ];

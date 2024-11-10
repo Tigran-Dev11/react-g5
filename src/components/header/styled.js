@@ -8,7 +8,7 @@ export const HeaderComponent = styled.div`
   align-items: center;
   border-radius: 6px;
   padding: 5px 15px;
-  background-color: ${COLORS.warning};
+  background-color: ${COLORS.black};
 `;
 
 export const HeaderNavLink = styled.a`
@@ -17,8 +17,8 @@ export const HeaderNavLink = styled.a`
 `;
 
 export const HeaderImage = styled.img`
-  width: 40px;
-  height: 30px;
+  width: 82px;
+  height: 45px;
   border-radius: 4px;
 `;
 
