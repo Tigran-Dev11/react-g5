@@ -9,7 +9,7 @@ export const FooterComponent = styled.div`
   gap: 10px;
   border-radius: 6px;
   padding: 5px 15px;
-  background-color: ${COLORS.warning};
+  background-color: ${COLORS.footer};
 `;
 
 export const FooterComponentInfo = styled.div`
@@ -23,10 +23,12 @@ export const FooterComponentTitle = styled.h1`
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;
+  color:${COLORS.white};
 `;
 
 export const FooterComponentSubTitle = styled.p`
   font-size: 8px;
   font-weight: 600;
   line-height: 20px;
+  color: ${COLORS.white};
 `;

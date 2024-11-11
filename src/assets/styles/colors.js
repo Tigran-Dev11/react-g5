@@ -9,4 +9,5 @@ export const COLORS = {
   gray: "#d8cece",
   black: "#020100",
   boxColor: "#1c140f",
+  footer: "#070707",
 };

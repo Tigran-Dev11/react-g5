@@ -4,7 +4,8 @@ import user from "./user.png"
 import server from "./Server.png";
 import location from "./location.png";
 import BoxImage from "./Rectangle 25.png"
+import check from "./Group 1122.png"
 
 export const IMAGES = {
-  logo,myPhoto,user,server,location,BoxImage,
+  logo,myPhoto,user,server,location,BoxImage,check,
 };
