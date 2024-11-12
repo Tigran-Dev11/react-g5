@@ -1,12 +1,15 @@
 /* eslint-disable no-unused-expressions */
 import { createSlice } from "@reduxjs/toolkit";
-import { getProducts } from "./actions";
+import { getProduct, getProducts } from "./actions";
+
 
 const initialState = {
   productCount: 0,
   status: "idle",
-  getProductStatus: "idle",
+  getProductsStatus: "idle",
   products: [],
+  product: null,
+  getProductStatus: "idle",
   searchValue: "",
 };
 
@@ -37,23 +40,35 @@ const productSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
-      state.getProductStatus = "pending";
+      state.getProductsStatus = "pending";
     }),
       builder.addCase(getProducts.rejected, (state) => {
-        state.getProductStatus = "error";
+        state.getProductsStatus = "error";
       }),
       builder.addCase(getProducts.fulfilled, (state, { payload }) => {
         if (payload?.length) {
-          state.getProductStatus = "success";
+          state.getProductsStatus = "success";
           state.products = payload;
         }
       });
+
+      builder.addCase(getProduct.pending, (state) => {
+        state.getProductStatus = "pending"
+      }),
+      builder.addCase(getProduct.rejected, (state) => {
+        state.getProductStatus = "error"
+      }),
+      builder.addCase(getProduct.fulfilled, (state, { payload }) => {
+        state.getProductStatus = "success";
+        state.product = payload
+      })
   },
 });
 
 const productActions = {
   ...productSlice.actions,
   getProducts,
+  getProduct,
 };
 
 const productReducer = productSlice.reducer;

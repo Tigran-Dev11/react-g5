@@ -1,7 +1,8 @@
-import s from "./basket.module.scss"
+import s from "./basket.module.scss";
+
 const Basket = () => {
     return(
-        <div>Basket</div>
+        <div className={s.basket}>Basket</div>
     )
 }
 
