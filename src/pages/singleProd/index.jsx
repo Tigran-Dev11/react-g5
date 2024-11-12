@@ -3,7 +3,7 @@ import s from "./singleProd.module.scss";
 import { useEffect } from "react";
 import { productActions } from "../../libs/redux/productSlice";
 import { useParams } from "react-router-dom";
-import { productSelector } from "../../libs/redux/productSlice/selectors";
+import { productsSelector } from "../../libs/redux/productSlice/selectors";
 import Loader from "../loader";
 
 
@@ -11,14 +11,15 @@ const SingleProd = () => {
 
     const dispatch = useDispatch()
     const {prodId} = useParams()
-    const {product, getProductStatus} = useSelector(productSelector)
+    const {product, getProductStatus} = useSelector(productsSelector)
   
-    useEffect(() => {
+    useEffect(() => {        
         if(prodId){
             dispatch(productActions.getProduct(prodId))
         }
         
     }, [prodId])
+    
 
     if(getProductStatus === "pending"){
         <Loader/>
