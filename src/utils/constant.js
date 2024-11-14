@@ -34,3 +34,8 @@ export const menuLinks = [
 ];
 
 
+export const STATUS = {
+    pending: "pending",
+    rejected: "error",
+    fulfilled: "success"
+}

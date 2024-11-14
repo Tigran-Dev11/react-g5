@@ -1,9 +1,11 @@
 import s from "./header.module.scss";
 import { menuLinks } from "../../utils/constant";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
+import { ROUTES } from "../../utils/constant";
 
 const Header = () => {
+  const navigate = useNavigate()
   return (
     <div className={s.header}>
       <h3>SUPINE</h3>
@@ -14,7 +16,7 @@ const Header = () => {
           </NavLink>
         ))}
         <div className={s.basket}>
-          <HiShoppingCart />
+          <HiShoppingCart onClick={()=>navigate(ROUTES.basket)}/>
         </div>
       </div>
     </div>

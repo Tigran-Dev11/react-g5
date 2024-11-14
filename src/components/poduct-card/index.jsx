@@ -4,16 +4,20 @@ import { ROUTES } from "../../utils/constant";
 import { useNavigate } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { HiShoppingCart } from "react-icons/hi";
+import { useDispatch } from "react-redux";
+// import { productsSelector } from "../../libs/redux/productSlice/selectors";
+import { productActions } from "../../libs/redux/productSlice";
 
 const ProductCard = ({product}) => {
-
+const dispatch = useDispatch();
+// const {product} = useSelector(productsSelector)
  const navigate = useNavigate();
 
  const addFavourite = () => {
 
  };
  const addBasket = () => {
-    
+    dispatch(productActions.addBasket(product))
  }
 
     return(

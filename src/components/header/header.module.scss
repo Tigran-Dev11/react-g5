@@ -1,3 +1,4 @@
+
 .header {
   background-color: #e3ded3;
   display: flex;
@@ -23,6 +24,10 @@
     .basket {
       svg {
         font-size: 22px;
+        cursor: pointer;
+        &:hover{
+          color: #a00000;
+        }
       }
     }
   }
