@@ -1,6 +1,6 @@
 import * as S from "./styled"
 
-export const Gallery=(item)=>{
+export const Gallery=({item})=>{
     const {image,icon,title}=item;
 
     return (
