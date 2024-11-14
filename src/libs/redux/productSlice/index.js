@@ -2,6 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getProduct, getProducts } from "./actions";
 import { STATUS } from "../../../utils/constant";
+import { calculateProductCount } from "../../../utils/calculateProductCount";
 
 const initialState = {
   productCount: 0,
@@ -12,10 +13,6 @@ const initialState = {
   getProductStatus: "idle",
   searchValue: "",
   basketItems: [],
-  basketItem: null,
-  basketItemExist: null,
-  updateBasketItems: [],
-  updatedBasketItems: [],
 };
 
 const productSlice = createSlice({
@@ -43,38 +40,47 @@ const productSlice = createSlice({
       });
     },
     addBasket: (state, { payload }) => {
-      state.basketItem = {
+      const basketItem = {
         id: payload.id,
         img: payload.image,
         title: payload.title,
         price: payload.price,
-        quantity: state.productCount,
+        quantity: 1,
       };
 
-      state.basketItemExist = state.basketItems.find(
-        (item) => item.id === payload.id
-      );
-      console.log(state.basketItems);
-      if (!state.basketItemExist) {
-        state.updateBasketItems = [...state.basketItems, state.basketItem];
-        localStorage.setItem(
-          "product",
-          JSON.stringify(state.updateBasketItems)
+
+      if(!state.basketItems.length){
+        state.basketItems = [basketItem];
+      }else{
+
+        const itemIndex = state.basketItems.findIndex(
+          (item) => item.id === basketItem.id
         );
-        return;
+
+
+        if(itemIndex === -1){
+          state.basketItems = [...state.basketItems, basketItem]; 
+        }else{
+          state.basketItems = state.basketItems.map((item)=>{
+            if(item.id === basketItem.id){
+              return {...item, quantity: item.quantity + 1 }
+            }
+            return item;
+          })
+        }
       }
 
-      state.updatedBasketItems = state.basketItems.map((item) => {
-        if (item.id === payload.id) {
-          return {
-            ...item,
-            quantity: item.quantity + state.productCount,
-          };
-        }
-        return item;
-      });
-      localStorage.setItem("product", JSON.stringify(state.updatedBasketItems));
+     state.productCount = calculateProductCount(state.basketItems)
+
+    localStorage.setItem("products", JSON.stringify(state.basketItems));
     },
+
+    getExistingDataLocalStorage: (state, {payload})=>{
+      state.basketItems = payload;
+      state.productCount = calculateProductCount(payload)
+
+
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
