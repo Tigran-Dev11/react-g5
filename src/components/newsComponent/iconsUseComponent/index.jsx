@@ -1,6 +1,6 @@
 import * as S from "./styled";
 
-export const IconComponent = (item) => {
+export const IconComponent = ({item}) => {
   
   return (
       <S.IconsBox>
