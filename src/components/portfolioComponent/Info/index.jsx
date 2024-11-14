@@ -1,17 +1,22 @@
 import Button from "../../../common/button";
-import { IMAGES } from "../../../assets/images";
-import * as S from "./styled"
+import "./style.css"
 
-export const Info = (props) => {
+export const Info = ({ item }) => {
+  const { title, firstSubTitle, secondSubTitle, image } = item;
+
   return (
-    <S.InfoBox>
-      <S.InfoPart>
-        <S.InfoBoxTitle>{props.title}</S.InfoBoxTitle>
-        <S.InfoBoxSubTitle>{props.firstSubTitle}</S.InfoBoxSubTitle>
-        <S.InfoBoxSubTitle>{props.secondSubTitle}</S.InfoBoxSubTitle>
+
+
+    <div className="infoBox">
+      <div className="infoPart">
+        <h1 className="infoBoxTitle">{title}</h1>
+        <p className="infoBoxSubTitle">{firstSubTitle}</p>
+        <p className="infoBoxSubTitle">{secondSubTitle}</p>
         <Button text="Road more" />
-      </S.InfoPart>
-      <S.ImagePart>{props.image}</S.ImagePart>
-    </S.InfoBox>
+      </div>
+      <div className="imagePart">
+        <img className="image" src={image} alt="InfoImage" />
+      </div>
+    </div>
   );
 };

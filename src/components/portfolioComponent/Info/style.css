@@ -1,0 +1,52 @@
+
+
+.infoBox {
+  width: 100%;
+  min-height: 490px;
+  display: flex;
+  margin-top: 180px;
+}
+
+.infoBoxTitle {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  color: white;
+}
+
+.infoPart {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 25px;
+  color: white;
+}
+
+.imagePlace {
+  width: 50%;
+  height: 100vh;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+} 
+
+.infoBox:nth-child(-n - 1) {
+  border: 2px solid orange;
+  margin-bottom: 1px;
+  display:flex;
+  flex-direction:row-reverse
+}
+
+.infoBox:nth-child(even) {
+  background-color: lightyellow;
+  display:flex;
+  flex-direction:row-reverse
+}

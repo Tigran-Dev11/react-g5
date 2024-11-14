@@ -4,7 +4,6 @@ import { COLORS } from "../../assets/styles/colors";
 export const InfoComponent = styled.div`
   width: 100%;
   height: 440px;
-  border: 1px solid red;
   background-color: ${COLORS.black};
   margin-bottom: 80px;
   padding-top:30px;
@@ -29,7 +28,6 @@ export const BannerPlace = styled.div`
   display: flex;
   justify-content:space-around;
   margin-top:120px;
-  border: 1px ${COLORS.white};
 `;
 
 export const VideoPlace = styled.div`

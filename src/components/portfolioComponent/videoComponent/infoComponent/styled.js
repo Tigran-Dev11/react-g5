@@ -12,3 +12,8 @@ export const SubTitle =styled.p`
     line:height:26px;
     color:${COLORS.white};
 `
+export const Image=styled.img`
+    width:40px;
+    height:40px;
+`
+

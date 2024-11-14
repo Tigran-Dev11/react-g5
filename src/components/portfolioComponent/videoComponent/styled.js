@@ -5,11 +5,12 @@ export const VideoComponentDiv = styled.div`
   display: flex;
   align-items: flex-end;
   gap:20px;
-  padding-bottom:20px;
+  padding-block:78px 20px;
+
 `;
 
-export const VideoPlace = styled.div`
-  margin-top: 200px;
+export const VideoDiv = styled.div`
+
 `;
 
 export const InfoDiv = styled.div`

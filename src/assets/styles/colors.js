@@ -10,4 +10,7 @@ export const COLORS = {
   black: "#020100",
   boxColor: "#1c140f",
   footer: "#070707",
+  gold: "#E87D0E",
+  orange: "#FB9E3C",
 };
+

@@ -9,7 +9,7 @@ export const menuList = [
 
   {
     id: 2,
-    name: "About",
+    name: "About-us",
     href: MENU.ABOUT,
   },
 

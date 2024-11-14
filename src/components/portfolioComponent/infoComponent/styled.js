@@ -6,7 +6,6 @@ import { COLORS } from "../../../assets/styles/colors";
 
 export const InfoPlace= styled.div`
 width:30%; 
-border:1px solid ${COLORS.secondary};  
 `
 
 export const InfoPlaceTitle= styled.h1`
@@ -21,4 +20,9 @@ export const InfoSubTitle=styled.p`
     font-weight:400;
     line-height:30px;
     color:${COLORS.white};
+`;
+
+export const Image = styled.img`
+    width:150px;
+    height:150px;
 `

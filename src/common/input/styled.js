@@ -15,3 +15,4 @@ export const Input = styled.input`
   padding-left: 10px;
   border: 1px solid ${COLORS.primary};
 `;
+

@@ -7,3 +7,4 @@ export const Input = ({ type, placeholder, error, register }) => {
     </S.CommonInput>
   );
 };
+

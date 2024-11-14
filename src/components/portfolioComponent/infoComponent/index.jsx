@@ -1,12 +1,16 @@
-import { IMAGES } from "../../../assets/images";
-import * as S from "./styled"
+import * as S from "./styled";
 
 export const InfoComponent = (props) => {
+  const { item } = props;
+
+  const { title, subTitle, image } = item;
+
   return (
-        <div>
-            <img src={IMAGES.user} alt="User" />
-            <S.InfoPlaceTitle>{props.title}</S.InfoPlaceTitle>
-            <S.InfoSubTitle>{props.subTitle}</S.InfoSubTitle>
-        </div>
+    <div>
+      <S.Image src={image} alt="User" />
+      <S.InfoPlaceTitle>{title}</S.InfoPlaceTitle>
+      <S.InfoSubTitle>{subTitle}</S.InfoSubTitle>
+      
+    </div>
   );
 };

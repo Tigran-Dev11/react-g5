@@ -1,11 +1,13 @@
-import { IMAGES } from "../../../../assets/images"
 import * as S from "./styled"
 
-export const InfoComponent=()=>{
-    return (
+export const CheckComponent=({item})=>{
+
+  const { subTitle, image } = item;
+
+  return (
       <S.InfoDiv>
-        <img src={IMAGES.check} alt="Check" />
-        <S.SubTitle>Lorem Ipsum is simply</S.SubTitle>
+        <S.Image src={image} alt="Check" />
+        <S.SubTitle>{subTitle}</S.SubTitle>
       </S.InfoDiv>
     );
 
