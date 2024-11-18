@@ -26,12 +26,35 @@ import computer from "./computer.png";
 import desktop from "./desktop.png";
 import selector from "./arrow 1.png";
 import map from "./Huge Global.png";
-import linkedin from "./Group 9.png";
-import facebook from "./Group 5.png";
-import instagram from "./Group 11.png";
-import twitter from "./Group 10.png";
+import blinkedin from "./Group 9.png";
+import bfacebook from "./Group 5.png";
+import binstagram from "./Group 11.png";
+import btwitter from "./Group 10.png";
 import call from "./phone 1.png";
-import locationIcon from "./Vector1.png"
+import locationIcon from "./Vector1.png";
+import notFound from "./i.webp";
+import wfacebook from "./facebook.png";
+import wtwitter from "./twitter.png";
+import wlinkedin from "./linkedin.png";
+import winstagram from "./instagram.png";
+import search from "./Group 3.png";
+import news1 from "./Rectangle 201.png";
+import news2 from "./Rectangle 202.png";
+import news3 from "./Rectangle 203.png";
+import news4 from "./Rectangle 204.png";
+import news5 from "./Rectangle 205.png";
+import news6 from "./Rectangle 206.png";
+import news7 from "./Rectangle 207.png";
+import Avatar from "./Avatar 1.png";
+import Bill from "./Bill 1.png";
+import Beverly from "./Beverly 1.png";
+import Claudia from "./Claudia 1.png";
+import gameCenter1 from "./gameCenter1.png";
+import gameCenter2 from "./gameCenter2.png";
+import gameCenter3 from "./gameCenter3.png";
+import gameCenter4 from "./gameCenter4.png";
+import gameCenter5 from "./gameCenter5.png";
+import gameCenter6 from "./gameCenter6.png";
 
 export const IMAGES = {
   logo,
@@ -62,10 +85,33 @@ export const IMAGES = {
   playStation,
   selector,
   map,
-  linkedin,
-  facebook,
-  instagram,
-  twitter,
+  blinkedin,
+  bfacebook,
+  binstagram,
+  btwitter,
   call,
   locationIcon,
+  notFound,
+  wfacebook,
+  winstagram,
+  wlinkedin,
+  wtwitter,
+  search,
+  news1,
+  news2,
+  news3,
+  news4,
+  news5,
+  news6,
+  news7,
+  Beverly,
+  Claudia,
+  Avatar,
+  Bill,
+  gameCenter1,
+  gameCenter2,
+  gameCenter3,
+  gameCenter4,
+  gameCenter5,
+  gameCenter6,
 };

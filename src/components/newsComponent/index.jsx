@@ -1,53 +1,115 @@
+import { NewComponent } from "./GalleryComponent/newComponent";
+import { GalleryComponent } from "./GalleryComponent";
+import { SearchComponent } from "../../common/searchComponent";
 import { IMAGES } from "../../assets/images";
-import { IconComponent } from "./iconsUseComponent";
-import { MessageCopmonent } from "./messageComponent";
 import * as S from "./styled";
 
 export const NewsComponent = () => {
-  const icons = [
+  const info = [
     {
-      image: IMAGES.facebook,
+      id: 1,
+      image: IMAGES.BoxImage,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ",
+      firstSubTitle:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      secondSubTitle:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     },
     {
-      image: IMAGES.instagram,
+      id: 2,
+      image: IMAGES.BoxImage2,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ",
+      firstSubTitle:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+    },
+  ];
+
+  const news = [
+    {
+      id: 1,
+      image: IMAGES.news1,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
     },
     {
-      image: IMAGES.twitter,
+      id: 2,
+      image: IMAGES.news2,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
     },
     {
-      image: IMAGES.linkedin,
+      id: 3,
+      image: IMAGES.news3,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
+    },
+    {
+      id: 4,
+      image: IMAGES.news4,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
+    },
+    {
+      id: 5,
+      image: IMAGES.news5,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
+    },
+    {
+      id: 6,
+      image: IMAGES.news6,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
+    },
+    {
+      id: 7,
+      image: IMAGES.news7,
+      name: "John smash",
+      time: ".5min",
+      title: "Lorem Ipsum is simply dummy text dummy text ? ",
     },
   ];
 
   return (
-    <div>
-      <S.Title>Lorem Ipsum is simply dummy text of the printing and.</S.Title>
-      <S.SubTitle>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </S.SubTitle>
-      <S.Image src={IMAGES.map} alt="Location" />
-      <S.ContactPlace>
-        <S.ContactBox>
-          <S.Icons>
-            <S.SecondTitle>Follow Us</S.SecondTitle>
-            <S.IconsPlace>
-              {icons.map((item) => {
-                return <IconComponent item={item} />;
-              })}
-            </S.IconsPlace>
-          </S.Icons>
-        </S.ContactBox>
-        <S.ContactNumberPlace>
-          <S.ImageIcon src={IMAGES.call} alt="ContactNumber" />
-          <p>+94 4444 5555 6</p>
-        </S.ContactNumberPlace>
-        <S.LocationPlace>
-          <S.ImageIcon src={IMAGES.locationIcon} alt="Location" />
-          <p>but also the leap into electronic typesetting</p>
-        </S.LocationPlace>
-      </S.ContactPlace>
-      <MessageCopmonent />
-    </div>
+    <S.NewsPage>
+      <S.Place>
+        <S.Title>Lorem Ipsum is simply dummy text of the printing and.</S.Title>
+        <S.SubTitle>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </S.SubTitle>
+        <S.SearchPlace>
+          <S.Input type="text" placeholder="Search" />
+          <S.Button>
+            <S.SearchImage src={IMAGES.search} alt="Search" />
+          </S.Button>
+        </S.SearchPlace>
+      </S.Place>
+      <S.Section1>
+        <S.GalleryPage>
+          <div>
+            {info.map((item) => {
+              return <GalleryComponent item={item} key={item.id} />;
+            })}
+          </div>
+        </S.GalleryPage>
+        <S.NewsPlace>
+          {news.map((item) => {
+            return <NewComponent item={item} key={item.id} />;
+          })}
+        </S.NewsPlace>
+      </S.Section1>
+      <SearchComponent/>    
+    </S.NewsPage>
   );
 };

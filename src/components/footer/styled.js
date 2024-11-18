@@ -2,33 +2,39 @@ import styled from "styled-components";
 import { COLORS } from "../../assets/styles/colors";
 
 export const FooterComponent = styled.div`
+  height: 380px;
   border: 1px solid ${COLORS.secondary};
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction:column;
   gap: 10px;
   border-radius: 6px;
-  padding: 5px 15px;
-  background-color: ${COLORS.footer};
+  padding: 6px 16px;
 `;
 
-export const FooterComponentInfo = styled.div`
-  width: 100%;
-  height: fit-content;
+export const FooterTop = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items:flex-end;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 6px 16px;
 `;
 
-export const FooterComponentTitle = styled.h1`
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 20px;
-  color:${COLORS.white};
+export const IconsPlace = styled.div`
+  display: flex;
+  margin-left:83px;
 `;
 
-export const FooterComponentSubTitle = styled.p`
-  font-size: 8px;
-  font-weight: 600;
-  line-height: 20px;
-  color: ${COLORS.white};
+export const FooterBottom=styled.div`
+  width:100%;
+  height:90px;
+  border-top:0.8px solid #D2D2D2;
+  margin-top:60px;
+  text-align:center;
+`
+
+export const BottomSubTitle = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: white;
 `;

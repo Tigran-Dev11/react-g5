@@ -3,25 +3,29 @@ import { CheckComponent } from "./infoComponent";
 import * as S from "./styled";
 
 export const VideoComponent = () => {
-   const check = [
-     {
-       subTitle: `Lorem Ipsum is simply`,
-       image: IMAGES.check,
-     },
-     {
-       subTitle: `Lorem Ipsum is simply`,
-       image: IMAGES.check,
-     },
-     {
-       subTitle: `Lorem Ipsum is simply`,
-       image: IMAGES.check,
-     },
-     {
-       subTitle: `Lorem Ipsum is simply`,
-       image: IMAGES.check,
-     },
-   ];
-  
+  const check = [
+    {
+      id: 1,
+      subTitle: `Lorem Ipsum is simply`,
+      image: IMAGES.check,
+    },
+    {
+      id: 2,
+      subTitle: `Lorem Ipsum is simply`,
+      image: IMAGES.check,
+    },
+    {
+      id: 3,
+      subTitle: `Lorem Ipsum is simply`,
+      image: IMAGES.check,
+    },
+    {
+      id: 4,
+      subTitle: `Lorem Ipsum is simply`,
+      image: IMAGES.check,
+    },
+  ];
+
   return (
     <div>
       <S.VideoComponentDiv>
@@ -45,7 +49,7 @@ export const VideoComponent = () => {
             industry.Lorem Ipsum is simply dummy .
           </S.SubTitle>
           {check.map((item) => {
-            return <CheckComponent item={item} />;
+            return <CheckComponent item={item} key={item.id} />;
           })}
         </S.InfoDiv>
       </S.VideoComponentDiv>

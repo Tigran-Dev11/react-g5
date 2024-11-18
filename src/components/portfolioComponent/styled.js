@@ -6,7 +6,7 @@ export const InfoComponent = styled.div`
   height: 440px;
   background-color: ${COLORS.black};
   margin-bottom: 80px;
-  padding-top:30px;
+  padding-top: 30px;
 `;
 
 export const Title = styled.h1`
@@ -26,10 +26,24 @@ export const SubTitle = styled.p`
 export const BannerPlace = styled.div`
   width: 100%;
   display: flex;
-  justify-content:space-around;
-  margin-top:120px;
+  justify-content: space-around;
+  margin-top: 120px;
 `;
 
 export const VideoPlace = styled.div`
   margin-top: 200px;
+`;
+
+export const CardTitle = styled.h1`
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50px;
+  color:white;
+`;
+
+export const CardSubTitle = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: white;
 `;

@@ -14,7 +14,7 @@ export const RegisterForm = styled.form`
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   padding: 20px 0 20px 20px;
   border-radius: 4px;
   margin: 20px 0 0 20px;
@@ -23,3 +23,4 @@ export const RegisterForm = styled.form`
 export const RegisterTitle = styled.h1`
   font-size: 24px;
 `;
+

@@ -1,4 +1,5 @@
 import * as S from "./styled"
+
 export const CardComponent = ({ item }) => {
   const { title, location, grade, icon, image, subTitle } = item;
   return (
@@ -18,3 +19,4 @@ export const CardComponent = ({ item }) => {
     </S.CardInfo>
   );
 };
+

@@ -20,3 +20,4 @@ export const Info = ({ item }) => {
     </div>
   );
 };
+

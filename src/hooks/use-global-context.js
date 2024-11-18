@@ -6,3 +6,4 @@ const useGlobalContext = () => {
 };
 
 export { useGlobalContext };
+

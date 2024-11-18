@@ -1,8 +1,11 @@
 import { NewsComponent } from "../../components/newsComponent";
+import * as S from "./styled";
+
 export const News=()=>{
     return (
-      <div>
+      <S.NewsPage>
        <NewsComponent/>
-      </div>
+      </S.NewsPage>
     );
 }
+

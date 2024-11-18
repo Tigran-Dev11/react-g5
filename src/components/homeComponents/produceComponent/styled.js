@@ -69,3 +69,4 @@ export const PositionalImage3 = styled.img`
   top: 100px;
   left: 1170px;
 `;
+

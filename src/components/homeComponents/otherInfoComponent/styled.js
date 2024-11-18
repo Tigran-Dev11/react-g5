@@ -14,7 +14,7 @@ export const Banner = styled.div`
 
 export const Title = styled.h1`
   width: 820px;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 600;
   line-height: 68px;
   color: ${COLORS.white};
@@ -44,10 +44,11 @@ export const ImageBolls = styled.img`
   height: 154px;
   position: absolute;
   bottom: 400px;
-  right: 420px;
+  right: 120px;
 `;
 
 export const BannerImage = styled.img`
-  width: 650px;
+  width: 1100px;
   height: 462px;
 `;
+

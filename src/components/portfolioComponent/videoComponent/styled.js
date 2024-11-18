@@ -36,3 +36,4 @@ export const SubTitle = styled.p`
 `;
 
 export const InfoComponent = styled.div``;
+

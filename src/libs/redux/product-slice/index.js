@@ -29,3 +29,4 @@ const productActions = {
 const productReducer = productSlice.reducer;
 
 export { productActions, productReducer, productSlice };
+

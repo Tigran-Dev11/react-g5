@@ -12,3 +12,4 @@ export const useLocalStorage = (key) => {
   };
   return { setItem, getItem, removeItem };
 };
+

@@ -24,11 +24,6 @@ export const menuList = [
     name: "Register",
     href: MENU.REGISTRATION,
   },
-  {
-    id: 5,
-    name: "Count",
-    href: MENU.COUNT,
-  },
 
   {
     id: 6,
@@ -40,4 +35,10 @@ export const menuList = [
     name: "News",
     href: MENU.NEWS,
   },
+  {
+    id: 5,
+    name: "Contact us",
+    href: MENU.CONTACT,
+  },
 ];
+

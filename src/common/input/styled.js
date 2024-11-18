@@ -8,10 +8,10 @@ export const CommonInput = styled.div`
   gap: 4px;
 `;
 export const Input = styled.input`
-  width: 50%;
-  height: 20px;
+  width: 100%;
+  height: 30px;
   color: ${COLORS.secondary};
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   padding-left: 10px;
   border: 1px solid ${COLORS.primary};
 `;

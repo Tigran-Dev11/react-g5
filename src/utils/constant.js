@@ -6,7 +6,9 @@ export const MENU = {
   PRODUCTS: "/products",
   PRODUCT: "/products/:prodId",
   ProductCard: "/card",
-  COUNT: "/count",
+  CONTACT: "/contact",
   PORTFOLIO: "/portfolio",
   NEWS: "/news",
+  NOTFOUND:"/NotFound"
 };
+

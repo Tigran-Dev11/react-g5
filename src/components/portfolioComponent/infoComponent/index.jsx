@@ -14,3 +14,4 @@ export const InfoComponent = (props) => {
     </div>
   );
 };
+

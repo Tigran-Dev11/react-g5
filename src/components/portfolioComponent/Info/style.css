@@ -4,13 +4,17 @@
   width: 100%;
   min-height: 490px;
   display: flex;
-  margin-top: 180px;
+  justify-content:center;
+  align-items:center;
+  padding-top: 180px;
+  gap:20px;
+  border:1px solid red;
 }
 
 .infoBoxTitle {
   font-size: 30px;
   font-weight: 500;
-  line-height: 45px;
+  line-height: 46px;
   color: white;
 }
 
@@ -19,23 +23,26 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-top:100px;
+  gap:10px;
 }
 
 p {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 25px;
+  line-height: 26px;
   color: white;
 }
 
 .imagePlace {
   width: 50%;
   height: 100vh;
+  margin-bottom:200px;
 }
 
 img {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 } 
 
 .infoBox:nth-child(-n - 1) {
@@ -46,7 +53,7 @@ img {
 }
 
 .infoBox:nth-child(even) {
-  background-color: lightyellow;
   display:flex;
   flex-direction:row-reverse
 }
+

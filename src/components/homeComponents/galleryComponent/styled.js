@@ -18,3 +18,7 @@ line-height:58px;
 color:${COLORS.white};
 `
 
+export const SliderPlace=styled.div`
+    display:flex;
+`
+

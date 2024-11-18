@@ -7,7 +7,7 @@ export const HeaderComponent = styled.div`
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
-  padding: 5px 15px;
+  padding: 5px 16px;
   background-color: ${COLORS.black};
 `;
 
@@ -18,7 +18,7 @@ export const HeaderNavLink = styled.a`
 
 export const HeaderImage = styled.img`
   width: 82px;
-  height: 45px;
+  height: 46px;
   border-radius: 4px;
 `;
 
@@ -28,7 +28,7 @@ export const HeaderMenu = styled.ul`
 `;
 
 export const HeaderMenuList = styled.li`
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   list-style: none;
 `;

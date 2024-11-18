@@ -5,10 +5,14 @@ export const AboutPageContainer = styled.div`
   width: 100%;
   min-height: fit-content;
   display: flex;
+  flex-direction:column;
   justify-content:space-between;
   gap: 60px;
-  padding: 20px 0 0 20px;
+  padding-top:20px;
 `;
+
+export const Section=styled.div`
+display:flex;`
 
 export const InfoPlace=styled.div`
   display:flex;
@@ -17,6 +21,13 @@ export const InfoPlace=styled.div`
   padding-left:20px;
 
 `
+
+export const Title = styled.h1`
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 45px;
+  color: ${COLORS.white};
+`;
 
 export const AboutPageTitle = styled.h1`
   width: 420px;
@@ -28,7 +39,7 @@ export const AboutPageTitle = styled.h1`
 `;
 
 export const AboutPageSubTitle = styled.p`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 30px;
   color: ${COLORS.white};
@@ -45,3 +56,14 @@ export const AboutPageImage = styled.img`
   height: 550px;
   border-radius: 4px;
 `;
+
+export const AboutWorkers=styled.div`
+  display:flex;
+  
+`
+
+export const AboutTeamPlace=styled.div`
+  display:flex;
+  gap:30px;
+`
+

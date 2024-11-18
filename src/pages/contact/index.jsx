@@ -1,8 +1,9 @@
-import { Info } from "../../components/about";
-export const About = () => {
+import * as S from "./styled"
+import { ContactComponent } from "../../components/contactComponent";
+export const Contact = () => {
   return (
-    <div className="container">
-      <Info />
-    </div>
+    <S.ContactPage>
+      <ContactComponent />
+    </S.ContactPage>
   );
 };

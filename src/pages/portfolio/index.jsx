@@ -1,8 +1,11 @@
 import { PortfolioComponent } from "../../components/portfolioComponent";
+import * as S from "./styled"
+
 export const Portfolio = () => {
   return (
-    <div>
+    <S.PortfolioPage>
       <PortfolioComponent/>
-    </div>
+    </S.PortfolioPage>
   );
 };
+

@@ -1,0 +1,31 @@
+.sliderContainer{
+    display:flex;
+    gap:20px;
+}
+
+.gameImage{
+    width: 250px;
+    height: 270px;
+    border: 20px;
+}
+
+.info{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.freeIcon{
+    width: 18px;
+    height: 26px;
+}
+
+h3{
+    font-size: 22px;
+    font-weight:500;
+    line-height:40px;
+    color:white;
+}
+
+

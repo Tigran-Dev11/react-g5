@@ -1,11 +1,11 @@
 import { MENU } from "../utils/constant";
-import { About } from "../pages/contact";
+import { About } from "../pages/about";
 import { Home } from "../pages/home";
 import {Login} from "../pages/login";
 import {Register} from "../pages/register";
-import { Counter } from "../pages/counter";
 import{Portfolio} from "../pages/portfolio";
 import {News} from "../pages/news";
+import {Contact} from "../pages/contact";
 
 export const router = [
   {
@@ -28,10 +28,6 @@ export const router = [
     component: About,
   },
   {
-    path: MENU.COUNT,
-    component: Counter,
-  },
-  {
     path: MENU.PORTFOLIO,
     component: Portfolio,
   },
@@ -39,4 +35,9 @@ export const router = [
     path: MENU.NEWS,
     component: News,
   },
+  {
+    path: MENU.CONTACT,
+    component: Contact,
+  },
 ];
+

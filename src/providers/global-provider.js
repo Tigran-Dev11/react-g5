@@ -23,3 +23,4 @@ const GlobalProvider = ({ children }) => {
 };
 
 export { GlobalContext, GlobalProvider };
+
