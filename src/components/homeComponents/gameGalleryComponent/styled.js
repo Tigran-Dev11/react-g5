@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ImagePlace=styled.div`
+  width: 360px;
 `
 
-
 export const Image=styled.img`
-    widht:220px;
+    width:100%;
     height:220px;
     border-radius:20px;
 `

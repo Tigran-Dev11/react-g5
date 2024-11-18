@@ -15,7 +15,7 @@ export const ShopPlace = styled.div`
 `;
 
 export const Title = styled.h1`
-  width: 760px;
+  
   font-size: 30px;
   font-weight: 700;
   line-height: 56px;
@@ -23,7 +23,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h1`
-  width: 780px;
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
@@ -31,7 +31,7 @@ export const SubTitle = styled.h1`
 `;
 
 export const ShopBox = styled.div`
-  width: 1040px;
+  
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -39,20 +39,18 @@ export const ShopBox = styled.div`
 `;
 
 export const GameImageGallery = styled.div`
-  width: 730px;
-  height: 480px;
-  display: flex;
-  flex-direction:column;
-  gap: 33px;
+ 
+  border: 1px solid red;
+
 `;
 
 export const GalleryTop = styled.div`
 width:100%;
-height:220px;
 display:flex;
-gap:28px;
-
-  `;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 10px;
+ `;
 
 export const GalleryBottom = styled.div`
   width: 100%;
