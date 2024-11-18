@@ -10,10 +10,3 @@ export const GameCenter=({item})=>{
     );
 }
 
-// if(image){
-//              <S.Image src={image} alt="GameCenterImage" />
-//         }esle if(miniImage){
-            
-//             <S.MiniImage src={miniImage} alt="GameCenterImage" />
-        
-//         }
