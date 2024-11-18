@@ -21,23 +21,23 @@ export const HomeComponent = () => {
      id: 3,
      image: IMAGES.gameCenter3,
    },
+
+   {
+    id: 4,
+    image: IMAGES.gameCenter4,
+  },
+  {
+    id: 5,
+    image: IMAGES.gameCenter5,
+  },
+  {
+    id: 6,
+    image: IMAGES.gameCenter6,
+  },
    
  ];
 
- const gameCenter1 = [
-   {
-     id: 4,
-     miniImage: IMAGES.gameCenter4,
-   },
-   {
-     id: 5,
-     image: IMAGES.gameCenter5,
-   },
-   {
-     id: 6,
-     image: IMAGES.gameCenter6,
-   },
- ];
+
 
   const shopInfo = [
     {
@@ -81,6 +81,7 @@ export const HomeComponent = () => {
 
   return (
     <S.Home>
+      <GalleryComponent />
       <ProduceComponent />
       <GalleryComponent />
       <OtherInfoComponent />
@@ -106,18 +107,13 @@ export const HomeComponent = () => {
         industry.
       </S.SubTitle>
 
-      <S.GameImageGallery>
+    
         <S.GalleryTop>
           {gameCenter.map((item) => {
             return <GameCenter item={item} key={item.id} />;
           })}
         </S.GalleryTop>
-        <S.GalleryBottom>
-          {gameCenter1.map((item) => {
-            return <GameCenter item={item} key={item.id} />;
-          })}
-        </S.GalleryBottom>
-      </S.GameImageGallery>
+  
       <SearchComponent/>
     </S.Home>
   );

@@ -1,7 +1,8 @@
-import { AutoPlay } from "../../../common/slider";
+
 import { IMAGES } from "../../../assets/images";
 import Button from "../../../common/button";
 import * as S from "./styled";
+import {Carousel} from '../../../common/slider'
 
 export const GalleryComponent = () => {
   const galleryInfo = [
@@ -37,11 +38,7 @@ export const GalleryComponent = () => {
         <S.Title>Currently Trending Games</S.Title>
         <Button text="SEE ALL" />
       </S.GalleryTop>
-      <S.SliderPlace>
-        {galleryInfo.map((item) => {
-          return <AutoPlay item={item} key={item.id} />;
-        })}
-      </S.SliderPlace>
+      <Carousel items={galleryInfo}/>
     </S.GalleryPlace>
   );
 };
