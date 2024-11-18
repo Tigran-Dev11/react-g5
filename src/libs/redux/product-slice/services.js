@@ -1,5 +1,7 @@
+import axios from 'axios'
 
+axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
 
 export const productAPI = {
-   getProducts: () => fetch("https://fakestoreapi.com/products")
+   getProducts: () => axios("/products")
 }

@@ -7,3 +7,6 @@ export const ROUTES = {
   singleProduct: "/products/:prodId",
   todos: "/todos",
 };
+
+
+const secret_key  = 'bkldfld'
