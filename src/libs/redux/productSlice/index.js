@@ -13,6 +13,7 @@ const initialState = {
   getProductStatus: "idle",
   searchValue: "",
   basketItems: [],
+  quantity: 0,
 };
 
 const productSlice = createSlice({
@@ -20,11 +21,14 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     incrementProductCount: (state, { payload }) => {
-      state.productCount = state.productCount + payload;
+      console.log(state.quantity);
+      console.log(payload);
+      // state.quantity = payload + 1;
+
+
     },
     decrementProductCount: (state, { payload }) => {
-      if (state.productCount > 1)
-        state.productCount = state.productCount - payload;
+      if (state.quantity > 1) state.quantity = state.quantity - payload;
     },
     changeStatusToSuccess: (state) => {
       state.status = "";
@@ -48,44 +52,39 @@ const productSlice = createSlice({
         quantity: 1,
       };
 
-
-      if(!state.basketItems.length){
+      if (!state.basketItems?.length) {
         state.basketItems = [basketItem];
-      }else{
-
+      } else {
         const itemIndex = state.basketItems.findIndex(
           (item) => item.id === basketItem.id
         );
 
-
-        if(itemIndex === -1){
-          state.basketItems = [...state.basketItems, basketItem]; 
-        }else{
-          state.basketItems = state.basketItems.map((item)=>{
-            if(item.id === basketItem.id){
-              return {...item, quantity: item.quantity + 1 }
+        if (itemIndex === -1) {
+          state.basketItems = [...state.basketItems, basketItem];
+        } else {
+          state.basketItems = state.basketItems.map((item) => {
+            if (item.id === basketItem.id) {
+              return { ...item, quantity: item.quantity + 1 };
             }
             return item;
-          })
+          });
         }
       }
 
-     state.productCount = calculateProductCount(state.basketItems)
+      state.productCount = calculateProductCount(state.basketItems);
 
-    localStorage.setItem("products", JSON.stringify(state.basketItems));
+      localStorage.setItem("products", JSON.stringify(state.basketItems));
     },
 
-    getExistingDataLocalStorage: (state, {payload})=>{
+    getExistingDataLocalStorage: (state, { payload }) => {
       state.basketItems = payload;
-      state.productCount = calculateProductCount(payload)
-
-
-    }
+      state.quantity = calculateProductCount(payload);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
       state.getProductsStatus = STATUS.pending;
-    // eslint-disable-next-line no-sequences
+      // eslint-disable-next-line no-sequences
     }),
       builder.addCase(getProducts.rejected, (state) => {
         state.getProductsStatus = STATUS.rejected;
@@ -99,7 +98,7 @@ const productSlice = createSlice({
 
     builder.addCase(getProduct.pending, (state) => {
       state.getProductStatus = STATUS.pending;
-    // eslint-disable-next-line no-sequences
+      // eslint-disable-next-line no-sequences
     }),
       builder.addCase(getProduct.rejected, (state) => {
         state.getProductStatus = STATUS.rejected;
@@ -120,6 +119,3 @@ const productActions = {
 const productReducer = productSlice.reducer;
 
 export { productActions, productReducer };
-
-
-

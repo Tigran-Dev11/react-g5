@@ -8,29 +8,24 @@ import Loader from "../loader";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "../../components/button";
 
-
-
 const SingleProd = () => {
+  const dispatch = useDispatch();
+  const { prodId } = useParams();
+  const { product, getProductStatus } = useSelector(productsSelector);
+  const navigate = useNavigate();
 
-    const dispatch = useDispatch()
-    const {prodId} = useParams()
-    const {product, getProductStatus} = useSelector(productsSelector)
-    const navigate = useNavigate()
-  
-    useEffect(() => {        
-        if(prodId){
-            dispatch(productActions.getProduct(prodId))
-        }
-        
-    }, [ prodId ])
-    
-
-    if(getProductStatus === "pending"){
-        <Loader/>
+  useEffect(() => {
+    if (prodId) {
+      dispatch(productActions.getProduct(prodId));
     }
+  }, [prodId, dispatch]);
 
-    return(
-        <div className={s.cardWrapper}>
+  if (getProductStatus === "pending") {
+    <Loader />;
+  }
+
+  return (
+    <div className={s.cardWrapper}>
       <Button click={() => navigate(-1)} text={<IoIosArrowBack />} />
 
       {product ? (
@@ -45,7 +40,7 @@ const SingleProd = () => {
         <h1>This product is not listed</h1>
       )}
     </div>
-    )
-}
+  );
+};
 
-export default SingleProd
+export default SingleProd;

@@ -1,9 +1,17 @@
 import s from "./basket.module.scss";
+import { useSelector } from "react-redux";
+import { productsSelector } from "../../libs/redux/productSlice/selectors";
+import BasketItem from "../../components/basketItem";
 
 const Basket = () => {
-    return(
-        <div className={s.basket}>Basket</div>
-    )
-}
+  const { basketItems } = useSelector(productsSelector);
+  return (
+    <div className={s.itemWrapper}>
+      {basketItems?.map((item) => {
+        return <BasketItem item={item} key={item.id} />;
+      })}
+    </div>
+  );
+};
 
-export default Basket
+export default Basket;

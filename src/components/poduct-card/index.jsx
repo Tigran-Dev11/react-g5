@@ -5,14 +5,11 @@ import { useNavigate } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { HiShoppingCart } from "react-icons/hi";
 import { useDispatch } from "react-redux";
-// import { productsSelector } from "../../libs/redux/productSlice/selectors";
 import { productActions } from "../../libs/redux/productSlice";
 
 const ProductCard = ({product}) => {
 const dispatch = useDispatch();
-// const {product} = useSelector(productsSelector)
- const navigate = useNavigate();
-
+const navigate = useNavigate();
  const addFavourite = () => {
 
  };
@@ -20,20 +17,21 @@ const dispatch = useDispatch();
     dispatch(productActions.addBasket(product))
  }
 
+
     return(
         <div className={s.productItem}>
       <div>
-        <img src={product.image} alt="img" />
+        <img src={product?.image} alt="img" />
       </div>
 
       <div className={s.descr}>
         <h2>
-          {product.title.lenght !== 2
-            ? product.title.slice(0, 20)
-            : product.title}
+          {product?.title?.lenght !== 2
+            ? product?.title?.slice(0, 20)
+            : product?.title}
         </h2>
         <div className={s.price}>
-          <span>{product.price?.toFixed(2)}$</span>
+          <span>{product?.price?.toFixed(2)}$</span>
           <div>
             <Button text={<FaRegHeart />} click={addFavourite} />
 
@@ -42,11 +40,7 @@ const dispatch = useDispatch();
         </div>
       </div>
 
-      {/* <div>
-        <Button className={s.increment} text="+" click={increment} />
-        <span>{count}</span>
-        <Button className={s.decrement} text="-" click={decrement} />
-      </div>  */}
+     
 
        <Button
         click={() => navigate(`${ROUTES.collections}/${product.id}`)}
