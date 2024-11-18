@@ -21,9 +21,19 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     incrementProductCount: (state, { payload }) => {
-      console.log(state.quantity);
-      console.log(payload);
-      // state.quantity = payload + 1;
+       
+      state.basketItems = state.basketItems?.map((item)=>{
+        if(item.id === payload){
+           return {
+            ...item, 
+            quantity: item.quantity + 1
+           }
+        }
+
+        return item
+      })
+
+      localStorage.setItem("products", JSON.stringify(state.basketItems));
 
 
     },

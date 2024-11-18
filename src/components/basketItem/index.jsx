@@ -1,19 +1,17 @@
 import s from "./basketItem.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { productActions } from "../../libs/redux/productSlice";
-import { productsSelector } from "../../libs/redux/productSlice/selectors";
-import { useState } from "react";
+
+
 
 const BasketItem = ({ item }) => {
-//   const { quantity } = useSelector(productsSelector);
-const [count, setCount] = useState(item.quantity)
   const dispatch = useDispatch();
 
-  const increment = (count) => {
-    dispatch(productActions.incrementProductCount(count));
+  const increment = () => {
+    dispatch(productActions.incrementProductCount(item.id));
   };
   const decrement = () => {
-    dispatch(productActions.decrementProductCount(1));
+    dispatch(productActions.decrementProductCount(item.id));
   };
   return (
     <div className={s.item}>
@@ -28,8 +26,7 @@ const [count, setCount] = useState(item.quantity)
       </span>
       <div className={s.count}>
         <span onClick={() => increment(item.quantity)}>+</span>
-        Count:<span>{count}</span>
-        {/* Count:<span>{item.quantity}</span> */}
+        Count:<span>{item.quantity}</span>
         <span onClick={decrement}>-</span>
       </div>
     </div>
