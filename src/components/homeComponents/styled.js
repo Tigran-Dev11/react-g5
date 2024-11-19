@@ -34,8 +34,9 @@ export const ShopBox = styled.div`
   
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content:center;
   margin-top: 94px;
+  padding-inline:100px;
 `;
 
 export const GameImageGallery = styled.div`

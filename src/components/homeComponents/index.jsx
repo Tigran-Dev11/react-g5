@@ -81,7 +81,6 @@ export const HomeComponent = () => {
 
   return (
     <S.Home>
-      <GalleryComponent />
       <ProduceComponent />
       <GalleryComponent />
       <OtherInfoComponent />

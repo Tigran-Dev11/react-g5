@@ -5,6 +5,27 @@
 }
 
 .slider-item img{
-     width: 380px;
+     width: 260px;
+     height:280px;
      border-radius: 10px;
+}
+
+
+
+.slider-item .slider-item-bottom{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+.slider-item-bottom img{
+    width:18px;
+    height:24px;
+}
+
+.slider-item-bottom h1{
+    font-size:22px;
+    font-weight: 500;
+    line-height: 42px;
+    color: #FFFFFF;
 }

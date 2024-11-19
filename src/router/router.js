@@ -1,11 +1,13 @@
 import { MENU } from "../utils/constant";
 import { About } from "../pages/about";
 import { Home } from "../pages/home";
-import {Login} from "../pages/login";
-import {Register} from "../pages/register";
-import{Portfolio} from "../pages/portfolio";
-import {News} from "../pages/news";
-import {Contact} from "../pages/contact";
+import { Login } from "../pages/login";
+import { Register } from "../pages/register";
+import { Products } from "../pages/products";
+import { Product } from "../pages/product";
+import { Portfolio } from "../pages/portfolio";
+import { News } from "../pages/news";
+import { Contact } from "../pages/contact";
 
 export const router = [
   {
@@ -31,6 +33,16 @@ export const router = [
     path: MENU.PORTFOLIO,
     component: Portfolio,
   },
+
+  {
+    path: MENU.PRODUCTS,
+    component: Products,
+  },
+
+  {
+    path: MENU.PRODUCT,
+    component: Product,
+  },
   {
     path: MENU.NEWS,
     component: News,
@@ -40,4 +52,3 @@ export const router = [
     component: Contact,
   },
 ];
-

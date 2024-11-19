@@ -26,6 +26,12 @@ export const menuList = [
   },
 
   {
+    id: 5,
+    name: "Products",
+    href: MENU.PRODUCTS,
+  },
+
+  {
     id: 6,
     name: "Portfolio",
     href: MENU.PORTFOLIO,
@@ -36,7 +42,7 @@ export const menuList = [
     href: MENU.NEWS,
   },
   {
-    id: 5,
+    id: 8,
     name: "Contact us",
     href: MENU.CONTACT,
   },

@@ -9,7 +9,7 @@ export const Carousel = ({ items }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1
   };
 
@@ -19,7 +19,11 @@ export const Carousel = ({ items }) => {
         {items.map(({ image, icon, title }, i) => {
           return (
             <div key={i} className="slider-item">
-                <img src={image} alt="" />
+              <img src={image} alt="GameImage" />
+              <div key={i} className="slider-item-bottom">
+                <img src={icon} alt="FreeIcon" />
+                <h1>{title}</h1>
+              </div>
             </div>
           );
         })}
