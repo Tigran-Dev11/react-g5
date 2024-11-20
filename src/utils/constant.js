@@ -9,6 +9,7 @@ export const MENU = {
   CONTACT: "/contact",
   PORTFOLIO: "/portfolio",
   NEWS: "/news",
-  NOTFOUND:"/NotFound"
+  NOTFOUND:"/NotFound",
+  BASKET:"/basket",
 };
 

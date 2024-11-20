@@ -8,6 +8,7 @@ import { Product } from "../pages/product";
 import { Portfolio } from "../pages/portfolio";
 import { News } from "../pages/news";
 import { Contact } from "../pages/contact";
+import { Basket } from "../pages/basket";
 
 export const router = [
   {
@@ -50,5 +51,9 @@ export const router = [
   {
     path: MENU.CONTACT,
     component: Contact,
+  },
+  {
+    path: MENU.BASKET,
+    component: Basket,
   },
 ];
