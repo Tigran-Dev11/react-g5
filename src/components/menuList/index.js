@@ -15,36 +15,36 @@ export const menuList = [
 
   {
     id: 3,
-    name: "Log-in",
-    href: MENU.LOGIN,
-  },
-
-  {
-    id: 4,
-    name: "Register",
-    href: MENU.REGISTRATION,
-  },
-
-  {
-    id: 5,
     name: "Products",
     href: MENU.PRODUCTS,
   },
 
   {
-    id: 6,
+    id: 4,
     name: "Portfolio",
     href: MENU.PORTFOLIO,
   },
   {
-    id: 7,
+    id: 5,
     name: "News",
     href: MENU.NEWS,
   },
   {
-    id: 8,
+    id: 6,
     name: "Contact us",
     href: MENU.CONTACT,
+  },
+
+  {
+    id: 7,
+    name: "Log-in",
+    href: MENU.LOGIN,
+  },
+
+  {
+    id: 8,
+    name: "Register",
+    href: MENU.REGISTRATION,
   },
 ];
 

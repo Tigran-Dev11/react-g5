@@ -49,13 +49,7 @@ export const GalleryTop = styled.div`
 width:100%;
 display:flex;
 flex-wrap: wrap;
-justify-content: space-between;
 gap: 10px;
- `;
+padding:20px 100px 0px 100px;
+`
 
-export const GalleryBottom = styled.div`
-  width: 100%;
-  height: 220px;
-  display: flex;
-  gap: 28px;
-`;

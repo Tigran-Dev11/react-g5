@@ -53,7 +53,7 @@ export const ProductCard = ({ product }) => {
   return (
     <div key={product.id} className="product-item">
       <img src={product.image} alt="ProductPicture" className="product-image" />
-      <h1 className="pruductTitle">${product.title}</h1>
+      <h1 className="pruductTitle">{product.title}</h1>
       <button
         className="learnMore"
         onClick={() => {

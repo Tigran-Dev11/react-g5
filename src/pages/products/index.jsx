@@ -30,7 +30,7 @@ export const Products = () => {
   return (
     <div className="products">
       {products.map((product) => {
-        if (product.title.length >= 30) {
+        if (product.title.length >= 20) {
           product.title = product.title.substring(0, 20) + "...";
         }
 

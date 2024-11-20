@@ -1,3 +1,4 @@
+import basketIcon from "./basketIcon.jpg";
 import logo from "./logo.png";
 import myPhoto from "./myphoto.jpg";
 import user from "./user.png";
@@ -58,6 +59,7 @@ import gameCenter6 from "./gameCenter6.png";
 
 export const IMAGES = {
   logo,
+  basketIcon,
   myPhoto,
   user,
   server,

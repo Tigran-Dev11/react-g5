@@ -1,11 +1,11 @@
-import * as S from "./styled"
+import "./style.css"
 
 export const GameCenter=({item})=>{
     const{image}=item
     return (
-      <S.ImagePlace>
-        <S.Image src={image} alt="GameCenterImage" />
-      </S.ImagePlace>
+      <div className="imagePlace">
+        <img className="image" src={image} alt="GameCenterImage" />
+      </div>
     );
 }
 
