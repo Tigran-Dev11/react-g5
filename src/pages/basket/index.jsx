@@ -8,8 +8,9 @@ export const Basket = () => {
   return (
     <S.BasketComponent>
       {basketPageItem?.map((item) => {
-        <BasketPageItem key={item.id} item={item} />;
+        return <BasketPageItem key={item.id} item={item} />;
       })}
     </S.BasketComponent>
   );
 };
+
