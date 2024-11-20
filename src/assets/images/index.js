@@ -1,6 +1,7 @@
 import basketIcon from "./basketIcon.jpg";
-import logo from "./logo.png";
+import logo from "./gift-box.png";
 import myPhoto from "./myphoto.jpg";
+import favIcon from "./favicon.jpg"
 import user from "./user.png";
 import server from "./Server.png";
 import location from "./location.png";
@@ -61,6 +62,7 @@ export const IMAGES = {
   logo,
   basketIcon,
   myPhoto,
+  favIcon,
   user,
   server,
   location,

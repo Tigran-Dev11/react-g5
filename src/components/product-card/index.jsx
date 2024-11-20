@@ -1,13 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { MENU } from "../../utils/constant";
-import { useState } from "react";
 import { useGlobalContext } from "../../hooks/use-global-context";
 import { IMAGES } from "../../assets/images";
 import "./style.css";
 
 export const ProductCard = ({ product }) => {
   const navigation = useNavigate();
-  const [count, setCount] = useState(1);
   const { basketItems, setBasketItems } = useGlobalContext();
 
   const addBasket = () => {
@@ -16,7 +14,7 @@ export const ProductCard = ({ product }) => {
       image: product.img,
       title: product.title,
       price: product.price,
-      quantity: count,
+      quantity: 1,
     };
 
     const basketItemExist = basketItems?.find((item) => item.id === product.id);
@@ -30,7 +28,7 @@ export const ProductCard = ({ product }) => {
       if (item.id === product.id) {
         return {
           ...item,
-          quantity: item.quantity + count,
+          quantity: item.quantity + 1,
         };
       } else {
         return item;
@@ -38,16 +36,6 @@ export const ProductCard = ({ product }) => {
     });
 
     setBasketItems(updatedBasketItems);
-  };
-
-  const decrease = () => {
-    if (count >= 2) {
-      setCount(count - 1);
-    }
-  };
-
-  const increase = () => {
-    setCount(count + 1);
   };
 
   return (
@@ -66,12 +54,9 @@ export const ProductCard = ({ product }) => {
       <div className="card-top-part">
         <div className="quentitySelector">
           <div>
-            <button onClick={decrease}>-</button>
-            <span>{count}</span>
-            <button onClick={increase}>+</button>
             <span>${product.price}</span>
           </div>
-          <button className="basketIcon" onClick={addBasket}>
+          <button className="basketIcon" click={addBasket}>
             <img className="basket" src={IMAGES.basketIcon} alt="BasketIcon" />
           </button>
         </div>

@@ -1,20 +1,17 @@
 import * as S from "./styled";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { productActions } from "../../libs/redux/productSlice";
 
 const BasketPageItem = ({ item }) => {
-  const [count, setCount] = useState(item.quentity);
-  const [price, setPrice] = useState(item.price * item.quentity);
-
+  const dispatch = useDispatch();
+  
   const increase = () => {
-    setCount(count + 1);
-    setPrice((price) => price + item.price);
+    dispatch(productActions.incrementProductCount(item.id));
   };
 
   const decrease = () => {
-    if (count >= 2) {
-      setCount(count - 1);
-      setPrice((price) => price - item.price);
-    }
+      dispatch(productActions.incrementProductCount(item.id));
+    
   };
 
   return (
@@ -26,11 +23,11 @@ const BasketPageItem = ({ item }) => {
         {item.title.length > 20 ? item.title.slice(0, 20) : item.title}
       </span>
       <span>
-        Price:<span>{price.toFixed(1)}</span>
+        Price:<span>{item.price.toFixed(1)}</span>
       </span>
       <S.CountPlace>
         <span onClick={increase}>+</span>
-        Count:<span>{count}</span>
+        Count:<span>{item.quentity}</span>
         <span onClick={decrease}>-</span>
       </S.CountPlace>
     </S.BasketComponent>

@@ -17,7 +17,7 @@ export const HeaderNavLink = styled.a`
 `;
 
 export const HeaderImage = styled.img`
-  width: 82px;
+  width: 76px;
   height: 46px;
   border-radius: 4px;
 `;
