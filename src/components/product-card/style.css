@@ -21,11 +21,13 @@
 .pruductTitle{
     font-size:14px;
     color:white;
+    cursor:default;
 }
 
 .learnMore{
     font-size:10px;
     border:none;
+    cursor:pointer;
 }
 
 .card-top-part{
@@ -47,10 +49,12 @@
 
 span{
     color:white;
+    cursor:default;
 }
 
 .basket{
     width: 20px;
     height: 20px;
+    cursor:pointer;
 }
 
