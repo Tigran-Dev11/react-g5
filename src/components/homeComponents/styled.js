@@ -40,7 +40,6 @@ export const ShopBox = styled.div`
 `;
 
 export const GameImageGallery = styled.div`
- 
   border: 1px solid red;
 
 `;
@@ -50,6 +49,6 @@ width:100%;
 display:flex;
 flex-wrap: wrap;
 gap: 10px;
-padding:20px 100px 0px 100px;
+padding:20px 50px 0px 50px;
 `
 

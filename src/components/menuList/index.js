@@ -24,11 +24,13 @@ export const menuList = [
     name: "Portfolio",
     href: MENU.PORTFOLIO,
   },
+  
   {
     id: 5,
     name: "News",
     href: MENU.NEWS,
   },
+
   {
     id: 6,
     name: "Contact us",
