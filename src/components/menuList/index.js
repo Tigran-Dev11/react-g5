@@ -24,7 +24,7 @@ export const menuList = [
     name: "Portfolio",
     href: MENU.PORTFOLIO,
   },
-  
+
   {
     id: 5,
     name: "News",
@@ -47,6 +47,12 @@ export const menuList = [
     id: 8,
     name: "Register",
     href: MENU.REGISTRATION,
+  },
+
+  {
+    id: 9,
+    name: "Basket",
+    href: MENU.BASKET,
   },
 ];
 

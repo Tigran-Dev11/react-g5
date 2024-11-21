@@ -23,3 +23,7 @@ export const CountPlace = styled.div`
   width: 100%;
   height: 100vh;
 `;
+
+export const Title = styled.h1`
+  color:white;
+`

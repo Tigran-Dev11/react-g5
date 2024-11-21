@@ -24,7 +24,7 @@ export const LoginForm = () => {
        data?.email === regData?.email &&
        data?.password === regData?.password
      ) {
-       navigate(MENU.COUNT);
+       navigate(MENU.HOME);
        removeItem(data);
      } else {
        alert(`Please check the entered data again

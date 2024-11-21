@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Loading } from "../../components/loading";
 import { IMAGES } from "../../assets/images/index";
-import "../products/style.css";
+import "./style.css";
 
 export const Product = () => {
   const [product, setProduct] = useState(null);
@@ -16,7 +16,9 @@ export const Product = () => {
         const data = await fetch(`https://fakestoreapi.com/products/${prodId}`);
         const product = await data.json();
         setProduct(product);
-      } catch (error) {}
+      } catch (error) {
+
+      }
     };
 
     if (prodId) {

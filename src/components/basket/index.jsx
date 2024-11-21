@@ -10,7 +10,7 @@ const BasketPageItem = ({ item }) => {
   };
 
   const decrease = () => {
-      dispatch(productActions.incrementProductCount(item.id));
+      dispatch(productActions.decrementProductCount(item.id));
     
   };
 

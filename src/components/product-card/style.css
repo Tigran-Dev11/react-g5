@@ -1,60 +1,69 @@
-.product-item{
-    width:200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid white;
-    gap:10px;
-    padding:10px 10px 0 10px;
-    background-color:rgb(189, 190, 190);
-    
+.product-item {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  gap: 10px;
+  padding: 10px 10px 0 10px;
+  background-color: rgb(189, 190, 190);
+
+  
 }
 
-.product-image{
-    width: 100%;
-    height: 90px;
-    margin-bottom:10px;
-
+.product-place:hover {
+    width:150px;
+    height:150px;
 }
 
-.pruductTitle{
-    font-size:14px;
-    color:white;
-    cursor:default;
+.product-image {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 10px;
 }
 
-.learnMore{
-    font-size:10px;
-    border:none;
-    cursor:pointer;
+.pruductTitle {
+  font-size: 14px;
+  color: white;
+  cursor: default;
 }
 
-.card-top-part{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
+.productTitle:hover {
+    font-size: 14px;
+  color: black;
+  cursor: pointer;
 }
 
-.basketIcon{
-    margin-right:10px;
+.learnMore {
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.quentitySelector{
-    width: 100%;
-    display:flex;
-    justify-content: space-between;
+.card-top-part {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-span{
-    color:white;
-    cursor:default;
+.basketIcon {
+  margin-right: 10px;
 }
 
-.basket{
-    width: 20px;
-    height: 20px;
-    cursor:pointer;
+.quentitySelector {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
+span {
+  color: white;
+  cursor: default;
+}
+
+.basket {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

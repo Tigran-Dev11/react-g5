@@ -40,24 +40,24 @@ export const RegisterForm = () => {
         />
         <Input
           type="text"
-          placeholder="first-name"
+          placeholder="last-name"
           register={register("lastName")}
           errors={errors?.lastName?.message}
         />
         <Input
-          type="text"
-          placeholder="first-name"
+          type="email"
+          placeholder="email"
           register={register("email")}
           errors={errors?.email?.message}
         />
         <Input
-          type="text"
-          placeholder="first-name"
+          type="password"
+          placeholder="password"
           register={register("password")}
         />
         <Input
-          type="text"
-          placeholder="first-name"
+          type="password"
+          placeholder="confirm-password"
           register={register("confirmPassword")}
         />
 
