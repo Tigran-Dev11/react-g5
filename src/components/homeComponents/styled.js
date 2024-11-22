@@ -43,19 +43,51 @@ export const GameImageGallery = styled.div`
   border: 1px solid red;
 `;
 
+
+
+export const GalleryBottom = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22% 32% 42%;
+  gap: 2%;
+  margin-top: 10px;
+
+
+  .imagePlace {
+    height: 220px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+`;
+
 export const GalleryTop = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2%;
   border: 1px solid yellow;
-  gap: 10px;
   margin-top: 70px;
+
+  .imagePlace {
+    height: 220px;
+
+    &:nth-child(4) {
+       border: 1px solid red;
+
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 `;
 export const Button = styled.button`
-  width:140px;
-  height:60px;
-  margin-block:70px 106px;
-  text-align:center;
+  width: 140px;
+  height: 60px;
+  margin-block: 70px 106px;
+  text-align: center;
   font-size: 20px;
   font-weight: 500;
   line-height: 38px;

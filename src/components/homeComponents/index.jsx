@@ -3,7 +3,6 @@ import { ProduceComponent } from "./produceComponent";
 import { GalleryComponent } from "./galleryComponent";
 import { OtherInfoComponent } from "./otherInfoComponent";
 import { ShopComponent } from "./shopComponent";
-import { GameCenter } from "./gameGalleryComponent";
 import { SearchComponent } from "../../common/searchComponent";
 import * as S from "./styled";
 
@@ -103,10 +102,24 @@ export const HomeComponent = () => {
       </S.SubTitle>
 
       <S.GalleryTop>
-        {gameCenter.map((item) => {
-          return <GameCenter item={item} key={item.id} />;
+        {gameCenter.slice(0, 3).map((item) => {
+          return (
+            <div className="imagePlace" key={item.id}>
+              <img src={item.image} alt="GameCenterImage" />
+            </div>
+          );
         })}
       </S.GalleryTop>
+
+      <S.GalleryBottom>
+        {gameCenter.slice(3, 6).map((item) => {
+          return (
+            <div className="imagePlace" key={item.id}>
+              <img src={item.image} alt="GameCenterImage" />
+            </div>
+          );
+        })}
+      </S.GalleryBottom>
 
       <S.Button>SEE ALL</S.Button>
 
