@@ -3,9 +3,11 @@ import { COLORS } from "../../../assets/styles/colors";
 
 export const VideoComponentDiv = styled.div`
   display: flex;
+  justify-content:space-between;
   align-items: flex-end;
   gap:20px;
   padding-block:78px 20px;
+  margin-right:88px;
 
 `;
 
@@ -17,6 +19,7 @@ export const InfoDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom:50px;
 `;
 
 export const Title = styled.h1`

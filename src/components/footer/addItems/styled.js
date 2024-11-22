@@ -9,5 +9,6 @@ export const IconPlace=styled.div`
 export const Image = styled.img`
     width:34px;
     height:34px;
+    cursor:pointer;
 `
 

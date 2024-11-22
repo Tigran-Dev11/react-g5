@@ -5,6 +5,7 @@ export const BannerInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:130px;
 `;
 
 export const Banner = styled.div`

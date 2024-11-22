@@ -7,6 +7,7 @@ export const ProducePlace = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top:120px;
 `;
 
 export const InfoProducePlace = styled.div`
@@ -21,6 +22,7 @@ export const InfoProducePlace = styled.div`
 export const IconsPlace = styled.div`
   width: 50%;
   position: reletive;
+  margin-top:110px;
 `;
 
 export const FavSubTitle = styled.p`

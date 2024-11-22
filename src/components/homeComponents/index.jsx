@@ -8,36 +8,33 @@ import { SearchComponent } from "../../common/searchComponent";
 import * as S from "./styled";
 
 export const HomeComponent = () => {
- const gameCenter = [
-   {
-     id: 1,
-     image: IMAGES.gameCenter1,
-   },
-   {
-     id: 2,
-     image: IMAGES.gameCenter2,
-   },
-   {
-     id: 3,
-     image: IMAGES.gameCenter3,
-   },
+  const gameCenter = [
+    {
+      id: 1,
+      image: IMAGES.gameCenter1,
+    },
+    {
+      id: 2,
+      image: IMAGES.gameCenter2,
+    },
+    {
+      id: 3,
+      image: IMAGES.gameCenter3,
+    },
 
-   {
-    id: 4,
-    image: IMAGES.gameCenter4,
-  },
-  {
-    id: 5,
-    image: IMAGES.gameCenter5,
-  },
-  {
-    id: 6,
-    image: IMAGES.gameCenter6,
-  },
-   
- ];
-
-
+    {
+      id: 4,
+      image: IMAGES.gameCenter4,
+    },
+    {
+      id: 5,
+      image: IMAGES.gameCenter5,
+    },
+    {
+      id: 6,
+      image: IMAGES.gameCenter6,
+    },
+  ];
 
   const shopInfo = [
     {
@@ -78,7 +75,6 @@ export const HomeComponent = () => {
     },
   ];
 
-
   return (
     <S.Home>
       <ProduceComponent />
@@ -106,14 +102,15 @@ export const HomeComponent = () => {
         industry.
       </S.SubTitle>
 
-    
-        <S.GalleryTop>
-          {gameCenter.map((item) => {
-            return <GameCenter item={item} key={item.id} />;
-          })}
-        </S.GalleryTop>
-  
-      <SearchComponent/>
+      <S.GalleryTop>
+        {gameCenter.map((item) => {
+          return <GameCenter item={item} key={item.id} />;
+        })}
+      </S.GalleryTop>
+
+      <S.Button>SEE ALL</S.Button>
+
+      <SearchComponent />
     </S.Home>
   );
 };

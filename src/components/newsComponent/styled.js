@@ -5,6 +5,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 padding-inline:50px;
+margin-top:110px;
 `
 
 export const Place = styled.div`
@@ -22,6 +23,7 @@ export const Title = styled.h1`
   line-height: 60px;
   color: #ffffff;
   text-align: center;
+  margin-top:20px;
 `;
 
 export const SubTitle = styled.p`
@@ -30,11 +32,13 @@ export const SubTitle = styled.p`
   line-height: 30px;
   color: #ffffff;
   text-align: center;
+  margin-top: 14px;
 `;
 
 
 export const SearchPlace = styled.div`
   position: relative;
+  margin-block: 74px 104px;
 `;
 
 export const Input = styled.input`

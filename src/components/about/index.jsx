@@ -88,7 +88,7 @@ export const Info = () => {
 
       <BannerComponent />
       <div>
-        <h1>Our Team</h1>
+        <S.TeamTitle>Our Team</S.TeamTitle>
 
         <S.AboutTeamPlace>
           {

@@ -6,6 +6,7 @@ export const Title = styled.h1`
   font-weight: 600;
   line-height: 60px;
   color: ${COLORS.white};
+  margin-top:100px;
 `;
 
 export const SubTitle = styled.h1`
@@ -26,6 +27,7 @@ export const ContactPlace = styled.div`
   display: flex;
   justify-content: space-between;
   padding-inline: 50px;
+  margin-top:62px;
 `;
 
 export const ContactBox = styled.div`

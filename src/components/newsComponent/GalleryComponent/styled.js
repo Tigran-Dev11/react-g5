@@ -6,8 +6,7 @@ flex-direction:column;
 align:items:flex-start;
 margin-block:90px;
 padding-inline:110px;
-`
-;
+`;
 
 export const Image = styled.img`
   width: 590px;
@@ -17,9 +16,9 @@ export const Image = styled.img`
 `;
 
 export const GalleryTop = styled.div`
-display:flex;
-flex-direction:column;
-align-items:flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
 export const Span = styled.span`
@@ -27,7 +26,11 @@ export const Span = styled.span`
   font-weight: 400;
   line-height: 30px;
   color: #fffcfc;
-  padding: 9px 28px 9px 32px;
+  width: 164px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #2351f5;
 `;
 
@@ -37,7 +40,7 @@ export const Title = styled.h1`
   font-weight: 600;
   line-height: 45px;
   color: #ffffff;
-  text-align:start;
+  text-align: start;
 `;
 
 export const Info = styled.div`
@@ -49,10 +52,10 @@ export const Info = styled.div`
 `;
 
 export const SubTitle = styled.p`
-width:440px;  
-font-size: 16px;
+  width: 440px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  text-align:start;
+  text-align: start;
   color: #ffffff;
 `;

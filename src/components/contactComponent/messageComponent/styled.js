@@ -5,7 +5,8 @@ export const MessagePlace = styled.div`
   min-height: fit-content;
   display: flex;
   justify-content:center;
-  margin-top:200px;
+  margin-block:200px 210px;
+  background-color:#1C140F;
 `;
 
 export const FormPlace = styled.form`  
@@ -54,12 +55,12 @@ export const Info = styled.p`
   font-size:14px;
   font-weight:500;
   line-height:24px;
-  color:4f4f4f;
+  color:#4f4f4f;
 `;
 
 export const TextArea=styled.textarea`
 width:100%;
-height:100px;
+height:230px;
 `
 
 

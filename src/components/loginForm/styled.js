@@ -7,12 +7,10 @@ export const LoginComponent = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  border: 1px solid ${COLORS.secondary};
   margin: 20px 0px 20px 0px;
 `;
 
 export const LoginForm = styled.form`
-  border: 1px solid ${COLORS.secondary};
   background-color: ${COLORS.gray};
   width: 40%;
   display: flex;

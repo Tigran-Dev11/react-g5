@@ -17,7 +17,7 @@ export const ProductCard = ({ product }) => {
       quantity: 1,
     };
 
-    const basketItemExist = basketItems?.find((item) => item.id === product.id);
+    const basketItemExist = basketItems?.find((item) => item.id === product.id)
 
     if (!basketItemExist) {
       setBasketItems([...basketItems, basketItem]);

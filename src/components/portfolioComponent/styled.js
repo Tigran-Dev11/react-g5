@@ -5,8 +5,7 @@ export const InfoComponent = styled.div`
   width: 100%;
   height: 440px;
   background-color: ${COLORS.black};
-  margin-bottom: 80px;
-  padding-top: 30px;
+  margin-block: 80px 110px;
 `;
 
 export const Title = styled.h1`
@@ -39,6 +38,7 @@ export const CardTitle = styled.h1`
   font-weight: 500;
   line-height: 50px;
   color:white;
+  margin-top:150px;
 `;
 
 export const CardSubTitle = styled.p`
@@ -46,4 +46,5 @@ export const CardSubTitle = styled.p`
   font-weight: 400;
   line-height: 26px;
   color: white;
+  margin-top:20px;
 `;
