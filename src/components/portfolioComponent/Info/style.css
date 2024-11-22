@@ -1,0 +1,57 @@
+
+
+.infoBox {
+  width: 100%;
+  min-height: 490px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding-top: 180px;
+  gap:20px;
+}
+
+.infoBoxTitle {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 46px;
+  color: white;
+}
+
+.infoPart {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top:50px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: white;
+}
+
+.imagePart {
+  width: 50%;
+  height: 100vh;
+}
+
+
+.image {
+  width: 500px;
+  height: 500px;
+} 
+
+.infoBox:nth-child(-n - 1) {
+  border: 2px solid orange;
+  margin-bottom: 1px;
+  display:flex;
+  flex-direction:row-reverse
+}
+
+.infoBox:nth-child(even) {
+  display:flex;
+  flex-direction:row-reverse
+}
+
