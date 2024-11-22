@@ -1,0 +1,40 @@
+
+.header {
+  background-color: #e3ded3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  h3 {
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+  .linkWrapper {
+    display: flex;
+    gap: 7px;
+    .link {
+      color: #000000;
+      text-transform: uppercase;
+      font-size: 15px;
+      &:hover {
+        color: #a00000;
+      }
+    }
+    .basket {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      svg {
+        font-size: 24px;
+        cursor: pointer;
+        &:hover{
+          color: #a00000;
+        }
+        &:last-child{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
