@@ -21,24 +21,30 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     incrementProductCount: (state, { payload }) => {
-       
-      state.basketItems = state.basketItems?.map((item)=>{
-        if(item.id === payload){
-           return {
-            ...item, 
-            quantity: item.quantity + 1
-           }
+      state.basketItems = state.basketItems?.map((item) => {
+        if (item.id === payload) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
         }
 
-        return item
-      })
+        return item;
+      });
 
       localStorage.setItem("products", JSON.stringify(state.basketItems));
-
-
     },
     decrementProductCount: (state, { payload }) => {
-      if (state.quantity > 1) state.quantity = state.quantity - payload;
+      state.basketItems = state.basketItems.map((item) => {
+        if (item.id === payload && item.quantity > 1) {
+          return {
+            ...item,
+            quantity: item.quantity - 1,
+          };
+        }
+        return item;
+      });
+      localStorage.setItem("products", JSON.stringify(state.basketItems));
     },
     changeStatusToSuccess: (state) => {
       state.status = "";

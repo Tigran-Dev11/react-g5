@@ -5,15 +5,22 @@ import { productsSelector } from "../../libs/redux/productSlice/selectors";
 import { productActions } from "../../libs/redux/productSlice";
 import Loader from "../loader";
 import ProductCard from "../../components/poduct-card";
+import { useSearchParams } from "react-router-dom";
 
 const Collections = () => {
   const { products, getProductStatus } = useSelector(productsSelector);
 
+  const [searchParams] = useSearchParams();
+  const gender = searchParams.get('type'); // "testCode"
+
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(productActions.getProducts());
-  }, []);
+     dispatch(productActions.getProducts(gender));
+  }, [gender, dispatch]);
+
+ 
 
   if (getProductStatus === "pending") {
     return <Loader />;

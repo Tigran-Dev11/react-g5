@@ -3,6 +3,7 @@ import { menuLinks } from "../../utils/constant";
 import { NavLink, useNavigate } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
 import { ROUTES } from "../../utils/constant";
+import { FaUser } from "react-icons/fa";
 
 const Header = () => {
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ const Header = () => {
         ))}
         <div className={s.basket}>
           <HiShoppingCart onClick={()=>navigate(ROUTES.basket)}/>
+          <FaUser onClick={()=>navigate(ROUTES.register)}/>
         </div>
       </div>
     </div>

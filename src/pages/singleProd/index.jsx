@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { productsSelector } from "../../libs/redux/productSlice/selectors";
 import Loader from "../loader";
 import { IoIosArrowBack } from "react-icons/io";
-import Button from "../../components/button";
+import { Button } from "../../components/button";
 
 const SingleProd = () => {
   const dispatch = useDispatch();

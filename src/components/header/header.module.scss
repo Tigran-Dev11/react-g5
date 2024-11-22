@@ -22,11 +22,17 @@
       }
     }
     .basket {
+      display: flex;
+      gap: 5px;
+      align-items: center;
       svg {
-        font-size: 22px;
+        font-size: 24px;
         cursor: pointer;
         &:hover{
           color: #a00000;
+        }
+        &:last-child{
+          font-size: 20px;
         }
       }
     }

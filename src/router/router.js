@@ -2,12 +2,12 @@
 import { ROUTES } from "../utils/constant";
 import Home from "../pages/home";
 import Collections from "../pages/collections";
-import Accessories from "../pages/accessories";
-import Men from "../pages/men";
-import Women from "../pages/women";
 import NotFound from "../pages/notFound";
 import SingleProd from "../pages/singleProd";
 import Basket from "../pages/basket";
+import Register from "../pages/register";
+import Login from "../pages/login";
+import UserInfo from "../pages/userInfo";
 
 
 export const router = [
@@ -27,23 +27,23 @@ export const router = [
         path:ROUTES.collections,
         component: Collections
     },
-    {
-        path:ROUTES.men,
-        component: Men
-    },
-    {
-        path:ROUTES.women,
-        component: Women
-    },
-    {
-        path:ROUTES.accessories,
-        component: Accessories
-    },
+
     {
         path:"*",
         component: NotFound
     },
-    
+    {
+        path:ROUTES.register,
+        component: Register
+    },
+    {
+        path:ROUTES.login,
+        component: Login
+    },
+    {
+        path:ROUTES.userInfo,
+        component: UserInfo
+    },
 ]
 
 

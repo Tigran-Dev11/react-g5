@@ -1,11 +1,11 @@
 export const ROUTES = {
     home: "/",
-    men: "/men",
-    women: "/women",
+    register: "/register",
+    login: "/login",
     collections: "/collections",
-    accessories: "/accessories",
     singleProduct: "/collections/:prodId",
-    basket: "/basket"
+    basket: "/basket",
+    userInfo: "/userInfo"
 }
 
 export const menuLinks = [
@@ -15,11 +15,11 @@ export const menuLinks = [
     },
     {
         title: "Men",
-        path: ROUTES.men
+        path: `${ROUTES.collections}?type=men's`
     },
     {
         title: "Women",
-        path: ROUTES.women
+       path: `${ROUTES.collections}?type=women's`
     },
     {
         title: "Collections",
@@ -27,7 +27,11 @@ export const menuLinks = [
     },
     {
         title: "Accessories",
-        path: ROUTES.accessories
+        path: `${ROUTES.collections}?type=jewelery`
+    },
+    {
+        title: "Electronics",
+        path: `${ROUTES.collections}?type=electronics`
     },
    
     

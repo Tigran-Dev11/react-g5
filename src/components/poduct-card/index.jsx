@@ -1,5 +1,5 @@
 import s from "./product-card.module.scss"
-import Button from "../button";
+import { Button } from "../button";
 import { ROUTES } from "../../utils/constant";
 import { useNavigate } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
@@ -10,7 +10,7 @@ import { productActions } from "../../libs/redux/productSlice";
 const ProductCard = ({product}) => {
 const dispatch = useDispatch();
 const navigate = useNavigate();
- const addFavourite = () => {
+const addFavourite = () => {
 
  };
  const addBasket = () => {
