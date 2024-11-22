@@ -3,8 +3,9 @@ import * as S from "./styled"
 
 export const Home=()=>{
     return (
-        <div>
+        <S.Home>
             <HomeComponent/>
-        </div>
+        </S.Home>
     )
 }
+
