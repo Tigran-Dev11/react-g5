@@ -3,8 +3,8 @@ import * as S from "./styled"
 
 export const CountPage=()=>{
     return (
-        <div>
+        <S.Count>
             <CountCompany/>
-        </div>
+        </S.Count>
     )
 }
