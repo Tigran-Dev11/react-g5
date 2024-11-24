@@ -1,0 +1,36 @@
+.counterPlace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counterPlace .counter {
+  width: 450px;
+  height: 500px;
+  border: 1px solid red;
+}
+.counterPlace .counter .display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.counterPlace .counter .display input {
+  width: 240px;
+  height: 60px;
+}
+.counterPlace .counter .display button {
+  width: 80px;
+  height: 60px;
+}
+.counterPlace .counter .calcBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.counterPlace .counter .calcBottom button {
+  width: 20%;
+  height: 60px;
+  border-radius: 20px;
+}/*# sourceMappingURL=counter.module.css.map */

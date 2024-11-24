@@ -1,10 +1,10 @@
-import CountCompany from "../../components/countComponent"
+import {CountComponent} from "../../components/countComponent"
 import * as S from "./styled"
 
 export const CountPage=()=>{
     return (
         <S.Count>
-            <CountCompany/>
+            <CountComponent/>
         </S.Count>
     )
 }
