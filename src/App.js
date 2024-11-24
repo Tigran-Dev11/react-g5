@@ -1,10 +1,15 @@
-import { Router } from "react-router-dom";
+import Router from "./router/routes";
+import { Header } from "./components/heades";
+import { Footer } from "./components/footer";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Router/>
+      <Header />
+      <Router />
+      <Footer />
     </div>
   );
 }
