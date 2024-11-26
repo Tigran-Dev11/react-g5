@@ -3,7 +3,7 @@ import { router } from "./router";
 
  const Router=()=>{
     return <Routes>
-        {router.map(({path,component:Component})=>{
+        {router.map(({path, component:Component})=>{
             return <Route key={path} path={path} element={<Component/>} />
         })}
     </Routes>

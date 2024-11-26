@@ -1,11 +1,12 @@
-import { Home } from "../pages/home";
-import {Login} from "../pages/login";
-import {Register} from "../pages/register"
 import { MENU } from "../utils/constant";
+import { Home } from "../pages/home";
+import { Login } from "../pages/login";
+import { Register } from "../pages/register";
+import { Products } from "../pages/products";
 
 export const router = [
   {
-    path: MENU.home,
+    path: "/",
     component: Home,
   },
 
@@ -18,4 +19,10 @@ export const router = [
     path: MENU.register,
     component: Register,
   },
+
+  {
+    path: MENU.products,
+    component: Products,
+  },
+
 ];

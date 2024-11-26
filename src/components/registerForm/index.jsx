@@ -1,17 +1,20 @@
+import { Input } from "../../common/input"
 import { Button } from "../../common/button"
+import * as S from "./styled"
 
 export const RegisterForm=()=>{
     return (
-        <div>
-            <form>
-                <input type="text" placeholder="First-Name" />
-                <input type="text" placeholder="Last-Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Confirm-Password" />
-                <input type="date" placeholder="" />
+        <S.RegisterPage>
+            <S.RegisterForm>
+                <S.Title>Register-Page</S.Title>
+                <Input type="text" placeholder="First-Name" />
+                <Input type="text" placeholder="Last-Name" />
+                <Input type="email" placeholder="Email" />
+                <Input type="password" placeholder="Password" />
+                <Input type="password" placeholder="Confirm-Password" />
+                <Input type="date" placeholder="Date-Birthday" />
                 <Button text={"Registration"} />
-            </form>
-        </div>
+            </S.RegisterForm>
+        </S.RegisterPage>
     )
 }

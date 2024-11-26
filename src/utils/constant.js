@@ -1,9 +1,10 @@
-export const MENU={
-    home:"/",
-    login:"/login",
-    register:"/register"
-
-}
+export const MENU = {
+  home: "/",
+  login: "/login",
+  register: "/register",
+  products: "/products",
+  ProductCard: "/card",
+};
 
 export const menu = [
   {
@@ -22,5 +23,11 @@ export const menu = [
     id: 3,
     name: "Register",
     href: MENU.register,
+  },
+
+  {
+    id: 4,
+    name: "Products",
+    href: MENU.products,
   },
 ];
