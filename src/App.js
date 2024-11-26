@@ -1,10 +1,10 @@
-import { Router } from "react-router-dom";
+import { TodoList } from "./pages/todo";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Router/>
+      <TodoList/>     
     </div>
   );
 }
