@@ -21,9 +21,12 @@ const registerSlice = createSlice({
         state.loginData?.email === state.registerData?.email &&
         state.loginData?.password === state.registerData?.password
       ) {
-        state.status = true;
+       state.status = !state.status;
       } else {
-        return alert("Your email and password must match");
+        
+        //  console.log("Hello");
+         
+         alert("Your email and password must match")
       }
     },
   },
